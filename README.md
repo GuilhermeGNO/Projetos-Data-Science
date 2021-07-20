@@ -3,8 +3,8 @@ Meu Portifólio de estudos e projetos de Data Science
 
 ![](https://github.com/GuilhermeGNO/Projetos-Estudos-Data-Science/blob/main/banner.png)
 
-# Carlos Melo
-<sub>*Lead Data Scientist* at Space Operations Center</sub>
+# Guilherme Novais
+<sub>*Estudante de Data Science e um apaixonado por dados</sub>
 
 As a experienced Data Scientist and Air Force pilot I combine analytical skills, ability to work in team environments, and attention to details. Having spend the last years applying Machine Learning to Brazilian Air Force real problems, I developed a critical thinking and problem-solving skills.
 
