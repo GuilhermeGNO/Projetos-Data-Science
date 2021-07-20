@@ -6,22 +6,20 @@ Meu Portifólio de estudos e projetos de Data Science
 # Guilherme Novais
 <sub>*Estudante de Data Science e um apaixonado por dados</sub>
 
-As a experienced Data Scientist and Air Force pilot I combine analytical skills, ability to work in team environments, and attention to details. Having spend the last years applying Machine Learning to Brazilian Air Force real problems, I developed a critical thinking and problem-solving skills.
+Procuro sempre novos desafios profissionais nas empresas que trabalho visando o desenvolvimento de um trabalho objetivo e gerador de resultados, de forma a possibilitar crescimento qualitativo e quantitativo.
+Em um processo de aprendizagem continua, estou buscando conhecimento em áreas de análise de dados, visualização de dados com software especificos, data science, análise exploratória com uso de linguagens de programação no intuito de entregar insights que auxiliem a empresa em que atuo.
 
-My credentials include a Master's in Space Science and Technology from the Aeronautics Institute of Technology (ITA), an institution of higher education and advanced research rated as one of the top and most prestigious engineering schools in Brazil, and a MBA in Project and Process Management from the University of Air Force (UNIFA).
-
-**Background in:** Python, Machine Learning, Space Operations and Mathematical Optimisation.
+**Background in:** Python, Excel.
 
 **Links:**
-* [Blog](http://sigmoidal.ai)
-* [LinkedIn](https://www.linkedin.com/in/carlosfab)
-* [Medium](https://www.medium.com)
-
+* [LinkedIn](https://www.linkedin.com/in/guilherme-novais-84b161163/)
 
 ## Projetos:
-Veja os tutoriais publicados do Sigmoidal:
+Abaixo listo tutorias realizados e que estão contidos nesse repositório:
 
-* **Como usar o Histograma para Data Science:** https://bit.ly/2L2cMwy
+* **Web Scraping Online Course Site:** Colocar o link do bitty link
+
+- Sugestões de projetos
 * **Como Implementar Regressão Linear com Python:** https://bit.ly/2Li5pzY
 * **Data Science: Investigando o naufrágio do Titanic:** https://bit.ly/2Ubr5SH
 * **Como Tratar Dados Ausentes com Pandas:** https://bit.ly/31KWSMN
