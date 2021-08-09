@@ -22,11 +22,11 @@ Abaixo listo tutorias realizados e que estão contidos nesse repositório:
 * **Web Scraping Online Course Site:** Colocar o link do bitty link
 
 - Sugestões de projetos
-* **Como Implementar Regressão Linear com Python:** https://bit.ly/2Li5pzY
-* **Data Science: Investigando o naufrágio do Titanic:** https://bit.ly/2Ubr5SH
-* **Como Tratar Dados Ausentes com Pandas:** https://bit.ly/31KWSMN
-* **XGBoost: aprenda este algoritmo de Machine Learning em Python:** https://bit.ly/2UbRhws
-* **Como criar uma Wordcloud em Python:** https://bit.ly/2OxsphM
-* **Como lidar com dados desbalanceados:** https://bit.ly/2ZlaNsV
+* **Como Implementar Regressão Linear com Python:** Colocar o link do bitty link
+* **Data Science: Investigando o naufrágio do Titanic:** Colocar o link do bitty link
+* **Como Tratar Dados Ausentes com Pandas:** Colocar o link do bitty link
+* **XGBoost: aprenda este algoritmo de Machine Learning em Python:** Colocar o link do bitty link
+* **Como criar uma Wordcloud em Python:** Colocar o link do bitty link
+* **Como lidar com dados desbalanceados:** Colocar o link do bitty link
 
 ---
