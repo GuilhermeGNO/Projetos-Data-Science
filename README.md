@@ -8,8 +8,8 @@ Meu Portifólio de estudos e projetos de Data Science
 # Guilherme Novais
 <sub>*Estudante de Data Science e um apaixonado por dados</sub>
 
-Procuro sempre novos desafios profissionais nas empresas que trabalho visando o desenvolvimento de um trabalho objetivo e gerador de resultados, de forma a possibilitar crescimento qualitativo e quantitativo.
-Em um processo de aprendizagem continua, estou buscando conhecimento em áreas de análise de dados, visualização de dados com software especificos, data science, análise exploratória com uso de linguagens de programação no intuito de entregar insights que auxiliem a empresa em que atuo.
+Como um aspirante a cientista de dados, procuro desenvolver minhas habilidades técnicas e soft skills para trabalhar com equipes assim como atenção aos detalhes. Apesar de ter passado um tempo de minha carreira usando somente Excel, consegui com isso desenvolver algumas habilidades na elaboração de perguntas pertinentes, pensamento crítico ao negócio que estava envolvido além de habilidade para montagem de gráficos para retirada de insights para suporte aos tomadores de decisão.
+
 
 **Background in:** Python, Excel.
 
