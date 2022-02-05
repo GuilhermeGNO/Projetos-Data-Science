@@ -1,8 +1,6 @@
 [![author](https://img.shields.io/badge/author-guilherme-red.svg)](https://www.linkedin.com/in/guilherme-novais-84b161163/) [![](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/release/python-365/) [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/GuilhermeGNO?tab=repositories)
 
 # Projetos-Estudos-Data-Science
-Meu Portifólio de estudos e projetos de Data Science
-
 ![](https://github.com/GuilhermeGNO/Projetos-Estudos-Data-Science/blob/main/banner.png)
 
 # Guilherme Novais
@@ -24,23 +22,29 @@ Atualmente, trabalho no atendimento dos clientes e colaboradores da empresa assi
 
 Atualmente, estou buscando uma oportunidade de trabalhar profissionalmente como Cientista de Dados para melhorar a tomada de decisão da empresa onde atuo, através da construção de soluções usando dados.
 
-
-
-Como um aspirante a cientista de dados, procuro desenvolver minhas habilidades técnicas e soft skills para trabalhar com equipes, assim como atenção aos detalhes. Apesar de ter passado um tempo de minha carreira usando somente Excel, consegui com isso desenvolver algumas habilidades na elaboração de perguntas pertinentes, pensamento crítico ao negócio que estava envolvido além de habilidade para montagem de gráficos para retirada de insights para suporte aos tomadores de decisão.
-
-
 ## Habilidades
 
 
 **Linguagens de programação e banco de dados:** 
-* Python com foco em análise de dados
+* 
+*
+*
+*
 
 **Estatística e Machine Learning** 
+*
+*
+*
 
 **Visualização de Dados**
+*
+*
+*
 
 **Engenharia de Software**
-
+*
+*
+*
 
 ## Projetos:
 Abaixo listo tutorias realizados e que estão contidos nesse repositório:
