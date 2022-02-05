@@ -46,12 +46,10 @@ Atualmente, estou buscando uma oportunidade de trabalhar profissionalmente como 
 *
 *
 
-## Projetos:
-Abaixo listo tutorias realizados e que estão contidos nesse repositório:
+## Experiências:
+Abaixo listo projetos realizados e que estão contidos nesse repositório:
 
 * **Web Scraping Online Course Site:** Colocar o link do bitty link
-
-- Sugestões de projetos
 * **Como Implementar Regressão Linear com Python:** Colocar o link do bitty link
 * **Data Science: Investigando o naufrágio do Titanic:** Colocar o link do bitty link
 * **Como Tratar Dados Ausentes com Pandas:** Colocar o link do bitty link
