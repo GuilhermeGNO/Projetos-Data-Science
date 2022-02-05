@@ -9,7 +9,7 @@
 # Boas Vindas
 Olá seja bem vindo ao meu portifólio de Ciência de Dados. Nesta página, eu demonstro minhas habilidades de resolver problemas de negócio utilizando conceitos e ferramentas da Ciência de Dados, através de projetos com dados públicos.
 
-Você vai encontrar também, minhas experiências profissionas, habilidades, ferramentas e conceitos envolvendo a Ciência de Dados.
+Você vai encontrar também, minhas habilidades, ferramentas e conceitos envolvendo a Ciência de Dados.
 
 Sinta-se à vontade para entrar em contato através dos links ao final da página.
 
