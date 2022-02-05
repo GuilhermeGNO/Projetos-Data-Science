@@ -49,13 +49,12 @@ Atualmente, estou buscando uma oportunidade de trabalhar profissionalmente como 
 ## Experiências:
 Abaixo listo projetos realizados e que estão contidos nesse repositório:
 
-* **Web Scraping Online Course Site:** Colocar o link do bitty link
+* **Construção de um programa de fidelidade com clusterização de clientes:** Colocar o link do bitty link
+
+
+
 * **Como Implementar Regressão Linear com Python:** Colocar o link do bitty link
-* **Data Science: Investigando o naufrágio do Titanic:** Colocar o link do bitty link
-* **Como Tratar Dados Ausentes com Pandas:** Colocar o link do bitty link
-* **XGBoost: aprenda este algoritmo de Machine Learning em Python:** Colocar o link do bitty link
-* **Como criar uma Wordcloud em Python:** Colocar o link do bitty link
-* **Como lidar com dados desbalanceados:** Colocar o link do bitty link
+
 
 
 **Links para contato:**
