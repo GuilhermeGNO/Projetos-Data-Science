@@ -16,11 +16,11 @@ Sinta-se à vontade para entrar em contato através dos links ao final da págin
 
 # Sobre mim
 
-Me chamo Guilherme sou formado em Logística e trabalho atualmente como Analista de Suporte N1 em uma empresa de tecnologia.
+Me chamo Guilherme sou formado em Logística e trabalho como Analista de Suporte N1 em uma empresa de tecnologia.
 
-Atualmente, trabalho no atendimento dos clientes e colaboradores da empresa, assim como faço parte também da equipe de moderação de conteúdos, trabalho com projetos pessoais de Ciência de Dados, para adquirir experiência na solução de problemas de negócio e domínio sobre as ferramentas de análise de dados.
+Atualmente, realizo atendimento dos clientes e colaboradores da empresa, em realação a assuntos de  moderação de conteúdos, trabalho com projetos pessoais de Ciência de Dados, para adquirir experiência na solução de problemas de negócio e domínio sobre as ferramentas de análise de dados.
 
-Atualmente, estou buscando uma oportunidade de trabalhar profissionalmente como Cientista de Dados para melhorar a tomada de decisão da empresa onde atuo, através da construção de soluções usando dados.
+No momento, estou buscando uma oportunidade de trabalhar profissionalmente como Cientista de Dados para melhorar a tomada de decisão da empresa onde atuo, através da construção de soluções usando dados.
 
 ## Habilidades
 
