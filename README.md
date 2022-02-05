@@ -31,17 +31,17 @@ Atualmente, estou buscando uma oportunidade de trabalhar profissionalmente como 
 *
 *
 
-**Estatística e Machine Learning** 
+**Estatística e Machine Learning:** 
 *
 *
 *
 
-**Visualização de Dados**
+**Visualização de Dados:**
 *
 *
 *
 
-**Engenharia de Software**
+**Engenharia de Software:**
 *
 *
 *
