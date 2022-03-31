@@ -1,11 +1,11 @@
 # Projeto de Insights: House Rocket
 ![Projeto-Insight-House-Rocket](sale.jpg) 
 
-O objetivo desse projeto é fornecer para o time de negócios, uma seleção de imóveis, dadas as melhores condições, para que a empresa possa realizar suas operações de compra e venda. Os insights fornecidos neste projeto visam demonstrar um valor de lucro máximo que a empresa pode obter dado as condições que a mesma pode definir num segundo momento.
+O objetivo desse projeto é fornecer para o CEO e time de corretores da empresa, uma seleção de imóveis, par que a empresa possa realizar investimentos e obter o máximo lucro na compra e venda desses imóveis.
 
-A ferramenta de visualização utilizada nesse projeto - Streamlit, permitirá que a empresa possa visualizar esse resultado de forma gráfica, tabular e através de mapas de localização.
+Para visualização dos resultados, será disponibilizada na Web com utilização da ferramenta Stramlit, possibilitando ao CEO e a equipe de corretores que possam acessar tais informações em qualquer momento com disponibilidade de 24/7, bastando ter um dispositivo que tenha conexão com a internet.
 
-O resultado geral obtido foi uma seleção de __10.505 imóveis__ (podendo ser variável de acordo com as condições/localizações) que corresponde a quase 50% dos imóveis do portfólio disponibilizado.
+*O resultado geral obtido foi uma seleção de __10.505 imóveis__ (podendo ser variável de acordo com as condições/localizações) que corresponde a quase 50% dos imóveis do portfólio disponibilizado.
 
 Assumindo que o time de negócios definiu os percentuais de 30% e 10% de margem  de lucro(conforme detalhes nos tópicos 1.4 e 2.2b, o lucro máximo que poderá ser obtido com as operações é de __US$ 1.186.638.788,20__
 
