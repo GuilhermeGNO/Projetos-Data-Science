@@ -4,7 +4,7 @@
 ![](https://github.com/GuilhermeGNO/Projetos-Estudos-Data-Science/blob/main/banner.png)
 
 # Guilherme Novais
-<sub>*Estudante de Data Science e um apaixonado por dados</sub>
+<sub>*Estudante de Data Science e um apaixonado por dados.</sub>
 
 # Boas Vindas
 Olá seja bem vindo ao meu portifólio de Ciência de Dados. Nesta página, eu demonstro minhas habilidades de resolver problemas de negócio utilizando conceitos e ferramentas da Ciência de Dados, através de projetos com dados públicos.
