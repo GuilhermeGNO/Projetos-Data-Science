@@ -26,7 +26,7 @@ No momento, estou buscando uma oportunidade de trabalhar profissionalmente como 
 
 
 **Linguagens de programação e banco de dados:** 
-* 
+* Python com foco para análise de dados
 *
 *
 *
