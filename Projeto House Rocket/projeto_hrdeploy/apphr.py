@@ -33,10 +33,10 @@ def set_attibutes(data):
 
 def data_overview(data):
     # Filters
-    f_attributes = st.sidebar.multiselect('Enter columns', data.columns)
-    f_zipcode = st.sidebar.multiselect('Enter zipcode', data['zipcode'].unique())
+    f_attributes = st.sidebar.multiselect('Selecione a coluna: ', data.columns)
+    f_zipcode = st.sidebar.multiselect('Selecione o ZipCode: ', data['zipcode'].unique())
 
-    st.title('Data Overview')
+    st.title('Visão Geral dos imóveis recomendados')
 
     # Setting the display of the filters
     if (f_zipcode != []) & (f_attributes !=[]):
@@ -55,7 +55,7 @@ def data_overview(data):
     st.dataframe(data)
 
     # Setting one disply to show graphs side-by-side
-    c1, c2 = st.columns((1, 1))
+    #c1, c2 = st.columns((1, 1))
 
     # Average metrics
     df1 = data[['id', 'zipcode']].groupby('zipcode').count().reset_index()
@@ -70,17 +70,17 @@ def data_overview(data):
     df.columns = ['zipcode', 'total houses', 'price', 'sqft_living']
 
     # Method to display a dataframe in streamlit app
-    c1.header('Descriptive Statistics')
-    c1.dataframe(df.describe().T, height = 600)
+    st.header('Estatísticas Descritivas')
+    st.dataframe(data.describe().T.iloc[1:, 1:] , width = 1200, height = 600)
 
     return None
 
 def region_overview(data, geofile):
     # Densidade de Portfolio
-    st.title('Region Overview')
+    st.title('Visão Geral da Região')
 
     c1, c2 = st.columns(2)
-    c1.header('Portfolio Density')
+    c1.header('Densidade do portifólio recomendado')
 
     # Getting a sample of the original dataframe to can be able to test the code
     df = data.sample(10)
@@ -94,7 +94,13 @@ def region_overview(data, geofile):
     # Getting each lat and log from our dataframe
     for name, row in df.iterrows():
         folium.Marker( [row['lat'], row['long']],
-        popup = 'Sold U${0} on: {1}. Features: {2} sqft, {3} bedrooms, {4} bathrooms, year built {5}'.format(row['price'], row['date'], row['sqft_living'], row['bedrooms'], row['bathrooms'], row['yr_built'])).add_to(marker_cluster)
+        popup = 'Sold U${0} on: {1}. Features: {2} sqft, {3} bedrooms, {4} bathrooms, year built {5}'.format(
+        row['price'],
+        row['date'],
+        row['sqft_living'],
+        row['bedrooms'],
+        row['bathrooms'],
+        row['yr_built'])).add_to(marker_cluster)
 
 
     # Plotting the map
@@ -102,7 +108,7 @@ def region_overview(data, geofile):
         folium_static(density_map)
 
     # Region Price map
-    c2.header('Price Density')
+    c2.header('Densidade por preço dos imóveis recomendados')
 
     # Setting the map to show within mean, what's the high price per zipcode
     df = data[['price', 'zipcode']].groupby('zipcode').mean().reset_index()
@@ -131,21 +137,21 @@ def region_overview(data, geofile):
 
 def set_commercial(data):
     # Distribuicao dos imoveis por categorias comerciais
-    st.sidebar.title('Comemercial Options')
-    st.title('Commercial Attributes')
+    st.sidebar.title('Opções Comerciais')
+    st.title('Métricas Comerciais')
 
     # Average price per Year
     min_year_built = int(data['yr_built'].min() )
     max_year_built = int(data['yr_built'].max() )
 
     # Setting filters
-    st.sidebar.subheader('Select Max Year Built')
-    f_year_built = st.sidebar.slider('Year Built', 
+    st.sidebar.subheader('Selecione o ano de construção:')
+    f_year_built = st.sidebar.slider('Selecione o ano de construção: ', 
     min_year_built,
     max_year_built,
     min_year_built)
 
-    st.header('Average Price Per Year Built')
+    st.header('Valor médio do imóvel por ano de construção')
 
     # Get Data
     data['date'] = pd.to_datetime(data['date']).dt.strftime('%Y-%m-%d')
@@ -158,38 +164,15 @@ def set_commercial(data):
     fig = px.line(df, x = 'yr_built', y = 'price')
     st.plotly_chart(fig, use_container_width = True)
 
-    # Average price per day
-    st.header('Average price per day')
-    st.sidebar.subheader('Select Max Data')
-
-    # Load Data
-    data = get_data(path = 'df_all.csv')
-    data['date'] = pd.to_datetime(data['date']).dt.strftime('%Y-%m-%d')
-
-    # Creagint filters
-    min_date = datetime.strptime(data['date'].min(), '%Y-%m-%d')
-    max_date = datetime.strptime(data['date'].max(), '%Y-%m-%d')
-    f_date = st.sidebar.slider('Date', min_date, max_date, min_date)
-
-    # Setting the filters
-    data['date'] = pd.to_datetime(data['date'])
-    data = data.loc[data['date'] <= f_date, : ]
-    df = data[['date', 'price']].groupby('date').mean().reset_index()
-
-    # Plot
-    fig = px.line(df, x = 'date', y = 'price')
-    st.plotly_chart(fig, use_container_width = True)
-
-
     # Histogram
-    st.header('Price Distribuition')
-    st.sidebar.subheader('Select Max Price')
+    st.header('Distribuição dos preços dos imóveis')
+    st.sidebar.subheader('Selecione o preço máximo do imóvel: ')
 
     # Creating Filters
     min_price = int(data['price'].min())
     max_price = int(data['price'].max())
     avg_price = int(data['price'].mean())
-    f_price = st.sidebar.slider('Price', min_price, max_price, avg_price)
+    f_price = st.sidebar.slider('Preço', min_price, max_price, avg_price)
 
     # Setting filter
     df = data[data['price'] < f_price]
@@ -203,40 +186,40 @@ def set_commercial(data):
 def set_physical(data):
     
     # Distribuicao das casas por categorias fisicas
-    st.sidebar.title('Attributes Options')
-    st.title('House Attributes')
+    st.sidebar.title('Opções dos atributos dos imóveis')
+    st.title('Opções dos imóveis')
 
     # Data Transformation
     data['floors'] = data['floors'].astype('int64')
     data['bathrooms'] = data['bathrooms'].astype('int64')
 
     # Creating Filters
-    f_bedrooms = st.sidebar.selectbox('Max number of bedrooms', sorted(set(data['bedrooms'].unique())))
-    f_bathrooms = st.sidebar.selectbox('Max number of bathrooms', sorted(set(data['bathrooms'].unique())))
+    f_bedrooms = st.sidebar.selectbox('Selecione o número máximo de quartos', sorted(set(data['bedrooms'].unique())))
+    f_bathrooms = st.sidebar.selectbox('Selecione o número máximo de banheiros', sorted(set(data['bathrooms'].unique())))
 
     # setting the layout of the plots
     c1, c2 = st.columns (2)
 
     # Houses per bedrooms
-    c1.header('Houses per bedrooms')
+    c1.header('Imóveis por número de quartos')
     df = data[data['bedrooms'] <= f_bedrooms]
     fig = px.histogram(df, x = 'bedrooms', nbins = 19)
     c1.plotly_chart(fig, use_container_width = True)
 
     # Houses per bathrooms
-    c2.header('Houses per bathrooms')
+    c2.header('Imóveis por número de banheiros')
     df = data[data['bathrooms'] <= f_bathrooms]
     fig = px.histogram(df, x = 'bathrooms', nbins = 19)
     c2.plotly_chart(fig, use_container_width = True)
 
     # Creating the filters
-    f_floors = st.sidebar.selectbox('Max number of floors', sorted(set(data['floors'].unique())))
-    f_waterview = st.sidebar.checkbox('Only House with Waterview')
+    f_floors = st.sidebar.selectbox('Selecione o número de andares: ', sorted(set(data['floors'].unique())))
+    f_waterview = st.sidebar.checkbox('Deseja visualizar somente casas com vista para água? ')
 
     c1, c2 = st.columns(2)
 
     # House per floors
-    c1.header('Houses per floors')
+    c1.header('Imóveis por quantidade de andares')
     df = data[data['floors'] <= f_floors]
     fig = px.histogram(df, x = 'floors', nbins = 19)
     c1.plotly_chart(fig, use_container_width = True)
@@ -248,7 +231,7 @@ def set_physical(data):
         df = data.copy()
 
     fig = px.histogram(df, x = 'waterfront', nbins = 10)
-    c2.header('Houses per waterview')
+    c2.header('Casas com vista para água')
     c2.plotly_chart(fig, use_container_width = True)
 
     return None
