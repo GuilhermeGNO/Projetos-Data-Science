@@ -1,17 +1,15 @@
 # Projeto de Insights: House Rocket
 ![Projeto-Insight-House-Rocket](sale.jpg) 
 
-O objetivo desse projeto é fornecer para o CEO e time de corretores da empresa, uma seleção de imóveis, par que a empresa possa realizar investimentos e obter o máximo lucro na compra e venda desses imóveis.
+O objetivo desse projeto é fornecer para o CEO e time de corretores da empresa, uma seleção de imóveis, para que a empresa possa realizar investimentos e obter o máximo lucro na compra e venda desses imóveis.
 
-Para visualização dos resultados, será disponibilizada na Web com utilização da ferramenta Stramlit, possibilitando ao CEO e a equipe de corretores que possam acessar tais informações em qualquer momento com disponibilidade de 24/7, bastando ter um dispositivo que tenha conexão com a internet.
+Para visualização dos resultados, será disponibilizada na Web, utilizando a ferramenta Streamlit, a possibilidade ao CEO e a equipe de corretores acesso a tais informações com disponibilidade de 24/7, bastando ter um dispositivo que tenha conexão com a internet.
 
-*O resultado geral obtido foi uma seleção de __10.505 imóveis__ (podendo ser variável de acordo com as condições/localizações) que corresponde a quase 50% dos imóveis do portfólio disponibilizado.
-
-Assumindo que o time de negócios definiu os percentuais de 30% e 10% de margem  de lucro(conforme detalhes nos tópicos 1.4 e 2.2b, o lucro máximo que poderá ser obtido com as operações é de __US$ 1.186.638.788,20__
+O resultado geral obtido foi uma seleção de __10.604 imóveis__ (podendo ser variável de acordo com as condições/localizações) que corresponde a quase 50% dos imóveis do portfólio disponibilizado.
 
 | __Número de imóveis__ | __Custo total__ | __Receita de vendas__ | __Lucro (profit)__ |
 | ----------------- | ----------------- | ----------------- | ----------------- |
-| 10.505 | US$ 4.079.586.744,00 | US$ 5.266.225.532,20 | US$ 1.186.638.788,20 |
+| 10.604 | US$ 4.141.568.273,00 | US$ 4.634.592.801,50 | US$ 493.024.528,50 |
 
 Link para visualização:  [<img alt="Heroku" src="https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white"/>](https://hr-view-analysis.herokuapp.com/)
 
@@ -27,7 +25,7 @@ O objetivo do case é fornecer insights para a empresa encontrar as melhores opo
 
 Sua principal estratégia é ***comprar boas casas*** em ótimas localizações com preços baixos e depois revendê-las posteriormente a preços mais altos. Quanto maior a diferença entre a compra e a venda, maior o lucro da empresa.
 
-Entretanto, as casas possuem muitos atributos que as tornam mais ou menos atrativas aos compradores e vendedores, e a localização e o período do ano também podem influenciar os preços.
+Entretanto, as casas possuem muitos atributos fato que as tornam mais ou menos atrativas aos compradores e vendedores, e a localização e conforme análise, o período do ano também podem influenciam os preços.
 
 ### 1.2 Questão do negócio:
 
@@ -35,12 +33,12 @@ Considerando que:
 
 a) O time do negócio não consegue tomar boas decisões de compra sem analisar os dados,e;
 
-b) O portfólio é muito grande, o que levaria muito tempo para fazer o trabalho manualmente.
+b) O portfólio é muito grande, o que tomaria muito tempo para fazer o trabalho manualmente.
 
-O objetivo desse projeto é fornecer uma seleção de imóveis, dadas as melhores condições, para que a empresa possa realizar suas operações de compra e venda. 
-O planejamento é demonstrar através de visualizações, quais as melhores oportunidades e qual resultado (lucro) máximo que pode ser alcançado.
+O objetivo desse projeto é fornecer uma seleção de imóveis, de acordo com  as melhores condições, para que a empresa possa realizar suas operações de compra e venda. 
+A proposta é demonstrar através de visualizações, quais as melhores oportunidades e qual resultado (lucro) máximo que pode ser alcançado.
 
-Em suma, o projeto visa responder às seguintes perguntas de negócio:
+Em resumo, o projeto visa responder às seguintes perguntas de negócio:
 
 - Quais são os imóveis que a House Rocket deveria comprar e por qual preço ?
  - Uma vez a casa comprada, qual o melhor momento para vendê-las e por qual preço ?
@@ -51,46 +49,45 @@ Os dados foram extraídos do link abaixo, onde constam todos os imóveis em port
 
 https://www.kaggle.com/harlfoxem/housesalesprediction
 
-Os atributos dos imóveis dentro do portfólio e seus respectivos significados, são os seguintes:
+Abaixo uma tabela com os atributos e descrição do conjunto de dados:
 
 |***Atributo*** | ***Descrição*** |
 | -------- | --------- |
-|**id** | Numeração única de identificação de cada imóvel |
-|**date** | Data da venda da casa |
-|**price** | Preço que a casa está sendo vendida pelo proprietário |
+|**id** | Identificação de cada imóvel | 
+|**date** | Data de quando a venda foi realizada |
+|**price** | Preço que a casa foi vendida pelo proprietário |
 |**bedrooms** | Número de quartos |
 |**bathrooms** | Número de banheiros (0.5 = banheiro em um quarto, mas sem chuveiro) |
-|**sqft_living** | Medida (em pés quadrado) do espaço interior dos apartamentos |
-|**sqft_lot** | Medida (em pés quadrado)quadrada do espaço terrestre |
-|**floors** | Número de andares do imóvel | 
-|**waterfront** | Variável que indica a presença ou não de vista para água (0 = não e 1 = sim) | 
+|**sqft_living** | Medida em pés quadrados dos espaços interiores dos apartamentos |
+|**sqft_lot** | Medida em pés quadrados  |
+|**floors** | Número de andares | 
+|**waterfront** | Indica se o imóvel possui vista para água (0 = não e 1 = sim) | 
 |**view** | Um índice de 0 a 4 que indica a qualidade da vista da propriedade. Varia de 0 a 4, onde: 0 = baixa 4 = alta | 
 |**condition** | Um índice de 1 a 5 que indica a condição da casa. Varia de 1 a 5, onde:1 = baixo 5 = alta | 
 |**grade** | Um índice de 1 a 13 que indica a construção e o design do edifício. Varia de 1 a 13, onde: 13 = baixo, 7 = médio e 1113 = alta | 
-|**sqft_basement** | A metragem quadrada do espaço habitacional interior acima do nível do solo | 
-|**yr_built** | Ano de construção de cada imóvel | 
-|**yr_renovated** | Ano de reforma de cada imóvel | 
+|**sqft_basement** | Medida em pés quadrados  | 
+|**yr_built** | Ano de construção | 
+|**yr_renovated** | Ano de reforma | 
 |**zipcode** | CEP da casa | 
 |**lat** | Latitude | 
 |**long** | Longitude | 
-|**sqft_livining15** | Medida (em pés quadrado) do espaço interno de habitação para os 15 vizinhos mais próximo | 
+|**sqft_livining15** | Medida em pés quadrado do espaço interno de habitação para os 15 vizinhos mais próximo | 
 |**sqft_lot15**| Medida (em pés quadrado) dos lotes de terra dos 15 vizinhos mais próximo | 
 
-*Além do dataset acima citado, foi utilizado um arquivo geojson para a criação de mapas de densidade. A API foi extraída do site ArcGIS Hub.*
+*Além do dataset acima citado, foi utilizado um arquivo geojson para a criação de mapas de densidade. A API foi extraída do site ArcGIS Hub, https://opendata.arcgis.com/datasets/83fc2e72903343aabff6de8cb445b81c_2.geojson *
 
 ### 1.5 Premissas do negócio:
 
 Dentro do processo de entendimento de negócio, exploração dos dados e decisão para fornecer os insights finais, foram adotadas as seguintes premissas:
 
-- Os valores iguais a zero em *yr_renovated* são casas que nunca foram reformadas;
-- O valor igual a 33 na coluna *bathroom* foi considerada um erro e por isso foi delatada das análises. Possivelmente poderia ser um erro de digitação, mas por falta dessa clareza, a exclusão foi optada;
 - A coluna *price* significa o preço que a casa foi ou será comprada pela empresa House Rocket;
-- Valores duplicados em *id* foram removidos e considerados somente a compra mais recente
-- Dado que a __localidade__ e a __condição__ são os principais fatores que influenciam na valorização ou desvalorização dos imóveis, essas foram características decisivas na seleção ou não dos imóveis
-- Para as condições dos imóveis, foi determinada a seguinte classificação: __1 = péssimo, 2 = ruim, 3 = regular, 4 = bom e 5 = excelente__
-Como a sazonalidade também influencia diretamente a demanda por investimento em imóveis, a estação do ano foi a característica decisiva para a época da venda do imóvel (*https://blog.loft.com.br/sazonalidade/*)
-
-__A premissa mais relevante (business assumption) , é que foi assumido no projeto que o time de negócios aplica um percentual de 30% sobre o valor dos imóveis compradas no valor abaixo do valor mediano da região + sazonalidade, e de 10% nos imóveis comprados acima do valor mediano da região + sazonalidade_
+- Os valores iguais a zero em *yr_renovated* são casas que nunca foram reformadas;
+- As informações do __preço mediano da região __ e a __condição__  foram características decisivas recomendação de compra ou não comprar dos imóveis
+- Para as condições dos imóveis, foi determinada a seguinte classificação: __1 = muito ruim, 2 = ruim, 3 = regular, 4 = bom e 5 = muito bom__
+- Como a sazonalidade também influencia diretamente a demanda por investimento em imóveis, a estação do ano foi a característica decisiva para a época da venda do imóvel. Foram assumidos valores medianos de acordo com sua região e sazonalidade. As épocas do ano, foram determinadas de acordo com as data de estação do ano da cidade Kings County USA, cidade ao qual pertence o conjunto de dados.
+-Uma das premissas mais relevantes, a recomendação do preço de venda, foi aplicada o seguinte cálculo, quando o preço de compra for menor do que a mediana da região + mediana da sazonalidade, foi aplicado um percentual de 30% para venda do imóvel, sendo que este valor não poderá passar do valor da mediana da região  + mediana sazonalidade, para casos como esse, serão considerados os valores da mediana da região + mediana da sazonalidade. Para preços acima da mediana da região + mediana da sazonalidade, foi aplicado o percentual de 10% em relação ao preço de compra.
+-Imóvel com informação de 33 quartos, foi interpretado como erro de digitação e foi assumido o valor de 3 quartos, já que após análise de imóveis parecidos, foi concluido que quantidade de 3 seria plausível.
+-Não foi encontrado motivos para deixar no conjunto de dados, imóveis com quantidade de banheiros iguais a 0, por isso todos os registros desse tipo (total 10) foram retirados do conjunto de dados.
 
 ## 2. Planejamento da solução:
 
@@ -118,14 +115,46 @@ A primeira etapa do projeto foi realizar a coleta, tratamento e exploração dos
 | sqft_living15| 6210.00| 399.00| 1988.35| 1840.00| 685.68 |
 | sqft_lot15| 871200.00| 651.00| 12786.34| 7620.00| 27375.41 |
 
+
+| **attributes** | **mean**|  **minimum** |  **max** |  **std** |  **median** | 
+| -------- | --------- |---------| -------- | --------- |--------- |
+|price	|541693.6|	|78000|	|7700000|	|367296.43|	|450000|
+|bedrooms	|3.37|	|0|	|11|	|0.9|	|3|
+|bathrooms	|2.12|	|0.5|	|8|	|0.77|	|2.25|
+|sqft_living	|2082.91|	|370|	|13540|	|918.85|	|1920|
+|sqft_lot	|15135.1|	|520|	|1651359|	|41547.34|	|7613.5|
+|floors	|1.5|	|1|	|3.5|	|0.54|	|1.5|
+|waterfront	|0.01|	|0|	|1|	|0.09|	|0|
+|view	|0.24|	|0|	|4|	|0.77|	|0|
+|condition	|3.41|	|1|	|5|	|0.65|	|3|
+|grade	|7.66|	|3|	|13|	|1.17|	|7|
+|sqft_above	|1791.03|	|370|	|9410|	|828.7|	|1560|
+|sqft_basement	|291.88|	|0|	|4820|	|442.84|	|0|
+|yr_built	|1971.1|	|1900|	|2015|	|29.39|	|1975|
+|yr_renovated	|84.77|	|0|	|2015|	|402.52|	|0|
+|zipcode	|98077.87|	|98001|	|98199|	|53.47|	|98065|
+|lat	|47.56|	|47.16|	|47.78|	|0.14|	|47.57|
+|long	|-122.21|	|-122.52|	|-121.31|	|0.14|	|-122.23|
+|sqft_living15	|1988.36|	|399|	|6210|	|685.47|	|1840|
+|sqft_lot15	|12783.86|	|651|	|871200|	|27380.23|	|7620|
+|month	|6.56|	|1|	|12|	|3.12|	|6|
+
+
 - Novas features:
-  - *constrution:* ano de construção maior ou menor que 1955
-  - *basement:* imóvel com ou sem porão
-  - *season:* estação do ano da venda do imóvel
-  - *waterfront:* vista ou não para água
-  - *renovated:* imóvel foi ou não reformado
-  - *describe_condition:* descrição da condição do imóvel, baseado no classificação assumida no item 1.4 deste ReadMe
-  - *status:* indica se o imóvel deve ou não ser comprado
+-*standard*: Padrão das casas pelo valor de vendar; Imóveis com preço acima de 540 k  foram considerados de alto padrão(high_standard), imóveis abaixo de 540 k  foram consideras de baixo padrão (low_standard)
+-*dormitory_type*: Tipo do imóvel (house, studio, apartment); Imóveis com o tipo de 'bedrooms' iguais a 1 foram considerados como 'studio', 'bedrooms' iguais a 2 foram considerados do tipo apartamento (apartment) e dormitórios iguais a 3 foram considerados como 'house'.
+-*condition_type*: Condição do imóvel (very bad, bad, regular, good, very good); Imóveis com 'condition' iguais a 1 foram considerados imóveis muito ruins (very bad), imóveis com valores iguais a 2 foram considerados imóveis ruins (bad), imóveis com valores iguais a 3, foram considerados imóveis de qualidade mediada (regular), imóveis iguais a 4 foram considerados de boa qualidade (good) e valores iguais a 5 foram considerados imóveis muito bons (very good).
+-  *construction:* ano de construção maior ou menor que 1955;
+- *basement:_status* imóvel com ou sem porão
+- *month:* mês que o imóvel ficou disponível para venda
+- *season:* estação do ano que o imóvel ficou disponível para venda; Dos meses de Março (3) a Maio (5), foi considerado estação 'spring', dos meses de Junho (6) a Agosto (8) foi foram considerados 'summer', os meses de Setembro (9) a Novembro (11) foram considerados 'fall' e dos meses de Dezembro (12) a Fevereiro (2) foram considerados 'winter'.
+- *waterfront_status:* vista ou não para água; Com referência ao atributo 'waterfront', valores iguais a 0 foram considerados como que 'no', ou seja, não possuem vista para a água, valores iguais a 1 foram considerados  como 'yes', ou seja, possuem vista para água.
+- *renovated_status:* imóvel foi ou não reformado;  Valores na coluna 'yr_renovated' iguais a zero foram consideados como imóveis que não foram renovados, imóveis que foram encontrados algum registro foram considerados como imóveis renovados.
+-*year*: Ano da data de venda/disponibilidade para venda do imóvel
+-*year_month*: Mês e ano de venda/disponibilidade do imóvel
+-*recomendation*: Coluna de recomendação de compra ou não de um imóvel
+-*sell_price*: recomendação do valor que os imóveis deveriam ser comprados
+-*profit*:
 
 ### 2.2  Seleção dos imóveis:
 
@@ -134,87 +163,43 @@ Todo planejamento dessa solução foi pensando na criação de um aplicativo de 
 Para iniciar a montagem das visualizações, foram realizados os seguintes passos para cada pergunta de negócio:
 
 __a) Quais são os imóveis que a House Rocket deveria comprar e por qual preço ?__
-- Agrupar os imóveis por região ( *zipcode* );
+- Agrupado os imóveis por região ( *zipcode* );
 - Dentro de cada região, foi encontrada a mediana do preço do imóvel;
 - Essa mediana foi retornada em cada linha do dataset para ser possível a comparação;
-- Foi assumida a seleção dos imóveis que estão abaixo do preço mediano da região e que estejam em boas condições - *condition* com valor 3, 4 ou 5
-- O próximo passo foi a criação de uma feature auxiliar para receber a indicação se o imóvel deve ou não ser comprado. Ou seja, se o imóvel estiver com preço abaixo da mediana da região e, estiver em condição “regular”, “bom” ou “excelente”, o imóvel é selecionado.
+- Foi assumida a seleção dos imóveis que estão abaixo ou igual ao preço mediano da região e que estejam em boas condições - *condition* com valor iguais a e acima de 3.
+- O próximo passo foi a criação de uma feature auxiliar para receber a indicação se o imóvel deve ou não ser comprado. Ou seja, se o imóvel estiver com preço abaixo da mediana da região e, estiver em condição “regular”(3) , “good” (4) ou “very good” (5), o imóvel é selecionado.
 
 __b) Uma vez a casa comprada, qual o melhor momento para vendê-las e por qual preço ?__
 - Agrupar os imóveis selecionados na questão 1 por região ( *zipcode* ) e também por temporada (*season*);
 - Dentro de cada região e temporada, foi encontrada a mediana do preço do imóvel;
-- Para cálculo do valor de venda, foram assumidas as seguintes condições, as quais foram aplicadas em novas features criadas - ***sale_price e profit:***
+- Para cálculo do valor de venda, foram assumidas as seguintes condições, as quais foram aplicadas em novas features criadas - ***sell_price e profit:***
 
    1. Se o preço da compra for maior que a mediana da região + sazonalidade. O preço da venda será igual ao preço da compra + 10%
-   2. Se o preço da compra for menor que a mediana da região + sazonalidade. O preço da venda será igual ao preço da compra + 30%
+   2. Se o preço da compra for menor que a mediana da região + sazonalidade. O preço da venda será igual ao preço da compra + 30% valor que não seja maior que a região + sazonalidade, caso o valor seja maior, será considerado o valor da região + sazonalidade
 
-### 2.3  Criação das visualizações:
-
-O objetivo deste projeto é responder às questões de negócios e gerar novos insights através de visualizações das tabelas, dashboards e mapas.
-
-As duas primeiras tabelas do aplicativo, demonstram respectivamente, os imóveis sugeridos para compra - com a opção de realizar filtros para visualizar os resultados por região e/ou por condição do imóvel, e os mesmos imóveis, com seus respectivos cenários de venda e lucro provisionado.
-
-Com a seleção feita, é possível visualizar os imóveis selecionados em um mapa e também, a densidade de lucro, onde é possível verificar qual região é mais lucrativa para se investir.
-
-![Projeto-Insight-House-Rocket](map_location.png) 
-
-![Projeto-Insight-House-Rocket](density_map.png)
-
-### 2.4  Planejamento da análise dos Insights:
-
-Dentre os imóveis selecionados como sugestão de compra e venda, foram feitas algumas análises para se encontrar insights, com o objetivo de maximizar o resultado esperado, oferecendo estratégias para a tomada de decisão.
-
-Ou seja, foram planejados dois grupos de insights dentro do projeto. Os diretamente ligados aos imóveis selecionados, e outro considerando todas as informações do portfólio, com o objetivo de gerar informações possivelmente desconhecidas e que possam vir a ser objetos de novas questões de negócio.
-
-## 3. Principais insights:
-
-### 3.1 Imóveis selecionados:
-
-Dentre os imóveis selecionados, foi feita uma exploração de dados através de gráficos, com o objetivo de analisar quais atributos oferecem uma maximização do lucro obtido. O resultado foi o seguinte:
-
-|__atributo__ | __condicao__ | __total_imoveis__ | __%_imoveis__ | __lucro_total__ | __%_lucro__ |
-|-----------|-----------|-----------|-----------|-----------|-----------|
-|*zipcode* |  98052 |  281 |  2.67 |  40728499.30 |  3.63 | 
-|*bedrooms* |  3 |  5752 | 54.75 | 601494702.90 | 53.66 |
-|*bathrooms* | 1.00 | 3041 | 28.95 | 279422866.10 | 24.93 |
-|*floors* | 1.00 | 6595 | 62.78 | 675302314.00 | 60.24 |
-|*season* | winter | 3978 | 37.87 | 427901808.40 | 38.17 |
-|*renovated* | no | 10193 | 97.03 | 1088345647.30 | 97.09 |
-|*describe_condition* | median | 6717 | 63.94 | 710291390.60 | 63.36 |
-|*waterfront_* | não | 10496 | 99.91 | 1120206748.40 | 99.93 |
-|*basement* | no | 7003 | 66.66 | 712727020.60 | 63.58 |
-|*grade* | 7 | 5821 | 55.41 | 590203975.30 | 52.65 |
-|*view* | 0 | 10228 | 97.36 | 1087680140.40 | 97.03 |
-|*constrution* | > 1955 | 7077 | 67.37 | 763675798.80 | 68.12 |
-
-A *feature* *%_imoveis* demonstra o percentual de imóveis na condição x com relação ao total dos imóveis selecionados. O *%_lucro*, o percentual do lucro, dentre os imóveis com a condição x, com relação ao total do lucro esperado com a solução do projeto.
-
-Foi realizado ainda um teste aplicando o conceito de Pareto, para verificar se seria possível maximizar o lucro com um número menor de casas vendidas, todavia como é possível verificar, não há uma diferença considerável entre *%_imóveis* e *%_lucro*.
-
-Evidente perceber que os principais insights a se destacar, é que imóveis com __view__ igual a zero, __sem vista para a água__ e que __nunca foram reformados__, são melhores para se investir, em termos de lucratividade.
-Outro ponto relevante, é que as operações de venda realizadas no __inverno__ são mais lucrativas, portanto, é o melhor período para se vender imóveis.
-
-![Projeto-Insight-House-Rocket](season_profit.png)
-
-### 3.2 Portfólio total:
+### 3. Portfólio total:
 
 Tendo todo entendimento do negócio, e respondida as perguntas de negócio, foram levantadas algumas hipóteses para serem validadas, com o objetivo de gerar insights para próximas questões de negócio ou mesmo gerar novas estratégias para a House Rocket:
 
 | __Hipótese__ | __Resultado__ | __Tradução para negócio__ |
 | ------------ | ------------ | ------------ |
-| __H1__ -Imóveis com vista para a água são em média mais caros | Verdadeira | Imóveis com vista para água são 212% mais caros. Procurar investir em imóveis sem vista para água, por terem custo de negócio menor |
-| __H2__ - Imóveis com data de construção menor que 1955 são em média mais baratos | Falsa | Investir em imóveis independente da data de construção |
-| __H3__ - Imóveis sem porão são maiores do que imóveis com porão | Verdadeira | Investir em imóveis sem porão, pois oferecem maior área de terreno |
-| __H4__ - Houve crescimento do preço médio dos imóveis YoY ( Year over Year ) | Falsa | Não houve considerável crescimento no preço médio entre os anos. Ou seja, o período analisado teve preços médios próximos, sem variações que poderia ser estudadas como anormalidades |
-| __H5__ - Imóveis com mais quartos são em média mais caros | Verdadeira | Investir em imóveis de até 4 quartos é o ideal. Acima de 5 quartos, o preço médio é 69% maior|
+| __H1__ -Imóveis que possuem vista para água, são em média 30% mais caros | Verdadeira | Imóveis com vista para água são em média 212% mais caros. Procurar investir em imóveis sem vista para água, por terem custo de negócio menor |
+| __H2__ - Imóveis com data de construção menor que 1955 são em média 50% mais baratos | Falsa | A diferencia média dos valores é de apenas 1%. Investir em imóveis independente da data de construção |
+| __H3__ - Imóveis sem porão são em média 50% maiores do que imóveis com porão | Falsa | Casas sem porão são apenas 19% maiores que casa sem porão. Caso seja estretegia da House Rocket, é segerido investimento em imóveis sem porão, pois oferecem maior área de terreno |
+| __H4__ - O crescimento do preço dos imóveis entre os anos de 2014 e 2015 é em média de 10%  | Falsa | Não houve considerável crescimento no preço médio entre os anos (cerca de somente 0.22%). Ou seja, o período analisado teve preços médios próximos, sem variações que poderia ser estudadas como anormalidades |
+| __H5__ - Imóveis com 3 banheiros tem um crescimento MoM (month of month) de 15% | False | Em média o crescimento MoM das casas com 3 banheiros é de somente 0.18% |
+| __H6__ - Imóveis com 2 andares são em média 15% mais caros do que aqueles com somente um andar | Verdadeira | Imóveis com 2 andares são em média 26.58% mais caros do que imóveis com apenas um andar. |
+| __H7__ - A maioria dos imóveis tornou-se disponível durante as estações 'summer/spring' | Verdadeira | Cerca de 59% dos imóveis ficaram disponíveis nessa época do ano |
+| __H8__ - Imóveis disponíveis durante summer/spring são em média 20% mais caros | False | Imóveis disponíveis entre summer/spring são apenas em média 5% mais caros |
+| __H9__ - Imóveis que foram reformado, são em média 40% mais caros | Verdadeira | Em média os imóveis reformados são cerca de 43.28% mais caros |
 
 ## 4. Resultados financeiros:
 
-O objetivo desse projeto era fornecer uma lista de imóveis com opções de compra e venda, e consequentemente o __lucro máximo__ que poderá ser obtido se todas as transações ocorrerem. Ou seja, o resultado financeiro apresentado abaixo representa o lucro máximo que pode ser obtido utilizando as recomendações informadas.
+O objetivo desse projeto era fornecer uma lista de imóveis com opções de compra e venda, e consequentemente o __lucro máximo__ que poderá ser obtido se todas as transações ocorrerem. Ou seja, o resultado financeiro apresentado abaixo representa o lucro máximo que pode ser obtido utilizando as recomendações informadas:
 
 | __Número de imóveis__ | __Custo total__ | __Receita de vendas__ | __Lucro (profit)__ |
 | ----------------- | ----------------- | ----------------- | ----------------- |
-| 10.505 | US$ 4.079.586.744.00 | US$ 5.266.225.532.20 | US$ 1.186.638.788.20 |
+| 10.604 | US$ 4.141.568.273,00 | US$ 4.634.592.801,50 | US$ 493.024.528,50 |
 
 Todavia cabe reforçar, que o lucro pode ser explorado por condições e região dos imóveis, onde as visualizações fornecidas demonstram todo resultado do projeto, assim como o resultado financeiro, de forma customizada para as opções escolhidas.
 
