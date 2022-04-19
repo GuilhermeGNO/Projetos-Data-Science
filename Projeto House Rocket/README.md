@@ -1,5 +1,4 @@
 # Projeto de Insights: House Rocket
-![Projeto-Insight-House-Rocket](sale.jpg) 
 
 O objetivo desse projeto é fornecer para o CEO e time de corretores da empresa, uma seleção de imóveis, para que a empresa possa realizar investimentos e obter o máximo lucro na compra e venda desses imóveis.
 
@@ -11,7 +10,7 @@ O resultado geral obtido foi uma seleção de __10.604 imóveis__ (podendo ser v
 | ----------------- | ----------------- | ----------------- | ----------------- |
 | 10.604 | US$ 4.141.568.273,00 | US$ 4.634.592.801,50 | US$ 493.024.528,50 |
 
-Link para visualização:  [<img alt="Heroku" src="https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white"/>](https://hr-view-analysis.herokuapp.com/)
+Link para visualização:  [<img alt="Heroku" src="https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white"/>](https://apphr-def.herokuapp.com)
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
