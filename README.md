@@ -25,8 +25,8 @@ No momento, estou buscando uma oportunidade de trabalhar profissionalmente como 
 ## Habilidades
 
 
-**Linguagens de programação e banco de dados:** 
-* Python com foco em análise de dados
+**Linguagens de programação e ferramentas analíticas:** 
+* Python
 * SQL
 
 **Estatística e Machine Learning:** 
