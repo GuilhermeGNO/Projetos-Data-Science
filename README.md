@@ -27,24 +27,17 @@ No momento, estou buscando uma oportunidade de trabalhar profissionalmente como 
 
 **Linguagens de programação e banco de dados:** 
 * Python com foco em análise de dados
-*
-*
-*
+* SQL
 
 **Estatística e Machine Learning:** 
-* 
-*
-*
+* Em progresso 
 
 **Visualização de Dados:**
 * Seaborn
 * Matplotlib
-*
 
 **Engenharia de Software:**
-*
-*
-*
+* Em progresso
 
 ## Experiências:
 Abaixo listo projetos realizados e que estão contidos nesse repositório:
