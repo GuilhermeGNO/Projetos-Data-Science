@@ -1,6 +1,6 @@
-# Projeto de Insights: House Rocket
+# Projeto de Previsão de Vendas: Drogarias Rossmann
 
-O objetivo desse projeto é fornecer para o CEO e time de corretores da empresa, uma seleção de imóveis, para que a empresa possa realizar investimentos e obter o máximo lucro na compra e venda desses imóveis.
+O objetivo desse projeto é fornecer para o CFO e Gerentes das Lojas ,uma previsão de faturamento no final de 6 semanas, para que o CFO possa planejar e alocar valores para futuras reformas das lojas. 
 
 Para visualização dos resultados, será disponibilizada na Web, utilizando a ferramenta Streamlit, a possibilidade ao CEO e a equipe de corretores acesso a tais informações com disponibilidade de 24/7, bastando ter um dispositivo que tenha conexão com a internet.
 
@@ -18,6 +18,8 @@ Link para visualização:  [<img alt="Heroku" src="https://img.shields.io/badge/
 
 ### 1.1 Contexto do negócio:
 
+A Rossmann é uma cadeia de formácias fundada em 1972 por Dirk Rossmann. É considerada uma das maiores redes de farmácias na Europa com cerca de 56.200 colaboradores e mais de 4000 lojas. Em 2019 Rossmann faturou mais de 10 bilhões, considerando países como: Alemanha, Polonia, Hungria, Republica Tcheca, Turkia, Albania, Kosovo e Espanha. Fonte: [Wikipedia](https://en.wikipedia.org/wiki/Rossmann_(company)
+
 A House Rocket é uma plataforma digital que tem como modelo de negócio, a compra e a venda de imóveis usando a tecnologia para analisar suas melhores oportunidades.
 
 O objetivo do case é fornecer insights para a empresa encontrar as melhores oportunidades de negócio no mercado de imóveis. O CEO da House Rocket gostaria de ***maximizar*** a receita da empresa encontrando ***boas oportunidades*** de negócio.
@@ -28,7 +30,7 @@ Entretanto, as casas possuem muitos atributos fato que as tornam mais ou menos a
 
 ### 1.2 Questão do negócio:
 
-Considerando que:
+Considerações:
 
 a) O time do negócio não consegue tomar boas decisões de compra sem analisar os dados,e;
 
