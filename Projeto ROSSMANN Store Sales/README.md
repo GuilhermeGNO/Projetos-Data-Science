@@ -3,10 +3,10 @@
 ![home](https://www.gsmmaniak.pl/wp-content/uploads/gsmmaniak/2019/03/rossmann-wypuscil-promocje-w-black-friday-ale-mocno-sie-przeliczyl-rozwscieczeni-klienci-skladaja-skargi-zwykle-zlodziejstwo-2389046.jpg) 
 
 Este repositório contém os códigos realizados para realizar a previsão de vendas para as cadeias de farmácias da Rossmann. <br>
-Os dados utilizados para esse projeto foram retirados do seguinte entedeço: [Rossmann Sales Prediction](https://www.kaggle.com/c/rossmann-store-sales). All additional information below are fictional
+Os dados utilizados para esse projeto foram retirados do seguinte entedeço: [Rossmann Sales Prediction](https://www.kaggle.com/c/rossmann-store-sales).
 
 #### Projeto - Previsão de Vendas:
-Os principais objetivo desse projeto são::
+Os principais objetivos desse projeto são:
 * Analisar com ténicas de exploração de dados as vendas das lojas contidas em uma base de dados forneceida pela Rossmann.
 * Prever as vendas para as próximas 6 semanas para cada loja.
 
@@ -15,7 +15,7 @@ Os principais objetivo desse projeto são::
 Rossmann is a pharmacy chain that operates over 3,000 stores in 7 European countries. The stores are going to be renovated and the CFO needs to know how much can be invested in each one of them. <br>
 The Data Scientist was requested to develop a sales prediction model that  forecast the sales for the next 6 weeks for each store. Therefore, the telegram bot must return this sales prediction for the given store.
 
-## 2. Resultado da analise para o Negócio
+## 2. Resultado da análise para o Negócio
 The model developed predicts a gross income of $286.69 MM in the next 6 weeks for the stores available, where the best and worst case scenarios results on $313.65 MM and $259.73 MM, respectively. These scenarios were calculated based on mean absolute percentage error for each store.
 <br>
 
@@ -27,17 +27,17 @@ The model developed predicts a gross income of $286.69 MM in the next 6 weeks fo
    * Summer starts on June 1st<br>
    * Fall starts on September 1st<br>
    * Winter starts on December 1st<br>
-<details><summary>The variables on original dataset goes as follows:</summary><br>
+<details><summary>Dicionário original dos dados:</summary><br>
 
 Variable | Definition
 ------------ | -------------
-|store | unique ID for each store|
+|store | Identificar único de cada loja|
 |days_of_week | weekday, starting 1 as Monday. |
-|date | date that the sales occurred |
-|sales | amount of products or services sold in one day  |
-|customers | number of customers |
-|open | whether the store was open (1) or closed (0)|
-|promo | whether the store was participating on a promotion (1) or not (0)|
+|date | Data que foram realizadas as vendas |
+|sales | Quantidade de vendas e/ou produtos realizadas na data especifica |
+|customers | Quantidade de clientes que realizaram compras na data especifica |
+|open | Informação se a loja esta ou não aberta na data especifica, 1 aberta, 0 fechada |
+|promo | Informação se a loja estava participando de alguma promoção ou não, 1 estava participando, 0 não estava participando|
 |sate_holiday | whether it was a state holiday (a=public holiday, b=easter holiday, c=christmas) or not (0) |
 |store_type | designates the store model as a, b, c or d. |
 |assortment | indicates the store assorment as: a=basic, b=extra, c=extended |
