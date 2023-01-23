@@ -1,4 +1,4 @@
-# P002 Sales Predictions for a Drugstore Chain
+# Previsão de vendas para uma cadeias de farmácias RossmannP002 Sales Predictions for a Drugstore Chain
 Sales prediction for a drugstore chain.
 
 ![home](https://www.gsmmaniak.pl/wp-content/uploads/gsmmaniak/2019/03/rossmann-wypuscil-promocje-w-black-friday-ale-mocno-sie-przeliczyl-rozwscieczeni-klienci-skladaja-skargi-zwykle-zlodziejstwo-2389046.jpg) 
@@ -6,28 +6,21 @@ Sales prediction for a drugstore chain.
 This repository contains codes for the sales predictions for Rossman drugstores. <br>
 The data used was available on [Kaggle](https://www.kaggle.com/c/rossmann-store-sales). All additional information below are fictional
 
-#### Project 002 - Sales Predictions:
-The objetives of this project are:
-* Perform exploratory data analysis on sales available on dataset.
-* Predict the sales for the next 6 weeks from each store of the pharmacy chain.
-* Develop a [telegram bot](https://t.me/rossmannMBA_bot) that can be acessed by the CEO from a mobile or computer.
-<!-- * Develop a online dashboard that can be acessed by the CEO from a mobile or computer. -->
-
-## Contacte me:
-[<img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />](https://www.linkedin.com/in/marianaborgal/)
-[![Gmail Badge](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white&link=mailto:mariana.albor@gmail.com)](mailto:mariana.albor@gmail.com)
-
+#### Projeto - Previsão de Vendas:
+Os prncipais objetivo desse projeto são::
+* Analisar com ténicas de exploração de dados as vendas das lojas contidas em uma base de dados forneceida pela Rossmann.
+* Prever as vendas para as próximas 6 semanas para cada loja.
 
 ---
-## 1. Business Problem
+## 1. Problema de negócio
 Rossmann is a pharmacy chain that operates over 3,000 stores in 7 European countries. The stores are going to be renovated and the CFO needs to know how much can be invested in each one of them. <br>
 The Data Scientist was requested to develop a sales prediction model that  forecast the sales for the next 6 weeks for each store. Therefore, the telegram bot must return this sales prediction for the given store.
 
-## 2. Business Results
+## 2. Resultado da analise para o Negócio
 The model developed predicts a gross income of $286.69 MM in the next 6 weeks for the stores available, where the best and worst case scenarios results on $313.65 MM and $259.73 MM, respectively. These scenarios were calculated based on mean absolute percentage error for each store.
 <br>
 
-## 3. Business Assumptions
+## 3. Premissas do Negócio
 * The data available is only from 2013-01-01 to 2015-07-31.
 * Stores without information on distance from competitors are considered without competition nearby.
 * Seasons of the year:<br>
@@ -77,17 +70,17 @@ Variable | Definition
 <!-- | x | xxx | -->
 </details><br>
 
-## 4. Solution Strategy
-1. Data Description
+## 4. Abordagem para solução do problema
+1. Limpeza de dados
 2. Feature Engineering
-3. Data Filtering
-4. Exploratory Data Analysis
-5. Data Preparation
-6. Feature Selection
-7. Machine Learning Modeling
-8. Hyper Parameter Fine Tuning
-9. Model-to-Business Interpretation
-10. Model Deploy  
+3. Filtragem de variáveis
+4. Exploração de dados
+5. Preparação dos dados
+6. Seleção de variáveis
+7. Aplicação de modelos de ML
+8. Fine-Tuning Hyperparameter
+9. Avaliação dos algoritmos
+10. Modelo em produção
 <br>
 
 ## 5. Top 3 Data Insights
@@ -141,6 +134,3 @@ The objective of this project was develop a prediction model for Rossmann stores
 * Variables meaning on [Kaggle](https://www.kaggle.com/c/rossmann-store-sales/data)
 
 ----
-## Contacte me:
-[<img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />](https://www.linkedin.com/in/marianaborgal/)
-[![Gmail Badge](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white&link=mailto:mariana.albor@gmail.com)](mailto:mariana.albor@gmail.com)
