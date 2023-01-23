@@ -1,178 +1,146 @@
-# Rossmann Store Sales -> Data Science Project
+# P002 Sales Predictions for a Drugstore Chain
+Sales prediction for a drugstore chain.
 
-![rossmann](https://user-images.githubusercontent.com/75986085/152585675-a7ceff53-8a6f-4548-84ea-abfd32c00fbf.png)
+![home](https://www.gsmmaniak.pl/wp-content/uploads/gsmmaniak/2019/03/rossmann-wypuscil-promocje-w-black-friday-ale-mocno-sie-przeliczyl-rozwscieczeni-klienci-skladaja-skargi-zwykle-zlodziejstwo-2389046.jpg) 
 
-<a href='https://github.com/xGabrielR/Rossmann-Store-Sales/blob/main/notebooks/Storytelling_Documentation_Rossmann.pdf'>Full PDF Documentation PT-BR.</a>
+This repository contains codes for the sales predictions for Rossman drugstores. <br>
+The data used was available on [Kaggle](https://www.kaggle.com/c/rossmann-store-sales). All additional information below are fictional
 
-<h2>0. Rossmann Stores Data and Info</h2>
-<p>Rossmann are a chain of pharmacies located in Europe, mainly in Germany, with around 56,200 employees and more than 4000 stores. The company was founded by Dirk Rossmann with its headquarters in Burgwedel near Hanover in Germany. ~ Wiki.</p>
-<p>What is a pharmacies chain?<br>Basically the chain start with one shop open named 'matrix', the next shop open is the branche. Have two types of chain, the associated chain is when several pharmacies with different owners get together & private chain which starts with the 'matrix' company and has a general owner.</p>
+#### Project 002 - Sales Predictions:
+The objetives of this project are:
+* Perform exploratory data analysis on sales available on dataset.
+* Predict the sales for the next 6 weeks from each store of the pharmacy chain.
+* Develop a [telegram bot](https://t.me/rossmannMBA_bot) that can be acessed by the CEO from a mobile or computer.
+<!-- * Develop a online dashboard that can be acessed by the CEO from a mobile or computer. -->
 
-<p>Rossmann CFO on a monthly results meeting asked to all store mananger a sales forecast for the next six months.</p>
-
-<p>CFO Like to know next sales for start a reform of all shops.
-Pharmaceutical Bussiness Model
-Rossmann is present with an e-commerce and in physical stores available for sales of household items, makeup and of course drugstore items, as it is a chain of pharmacies, it is spread over several parts of Europe, thus being able to select regions with greater growth potential and reducing the competition rate.
-'First Assumptions'</p>
-<p>The Course Base <a href='https://sejaumdatascientist.com/eu-criei-esse-projeto-e-consegui-meu-primeiro-emprego-como-data-scientist/'>Seja Um Data Scientist</a>.</p>
-
-<ul>
-  <dl>
-    <dt>Market Size.</dt>
-      <dd>All persons over 18 years old, with preference for older persons.</dd>
-    <dt>Marketing Channels.</dt>
-      <dd>Rossmann Website & Shops.</dd>
-    <dt>Principal Metrics.</dt>
-      <dd>Channel Offline: Working on physical stores.</dd>
-      <dd>Recency: Purchases over time.</dd>
-      <dd>Frequency: Shop sales frequency for sales forecast.</dd>
-      <dd>Market Share: Sales competitions.</dd>
-  </dl>
-</ul>
-
-![chanel](https://user-images.githubusercontent.com/75986085/153439927-f4684894-7067-4023-b089-2116e6d5a7bb.png)
-
-1. Do older customers buy more from physical stores or from competitors?
-2. What is the marketing investment compared to physical stores in terms of e-commerce?
-3. What are the new products that make customers buy from Rossmann stores instead of competing stores?
-4. How do these stores behave in terms of receiving new merchandise to sell to new customers?
-5. Are the products sold easily accessible?
-6. How are the prices of the products in relation to the location of the stores?
-7. How are rossmann products and stores being evaluated?
-8. What is the buying process like for these customers?
-9. Would a customer who bought in a physical store buy again?
-10. How much does a customer cost for physical stores?
-11. Who are the main partners of the rossmann brand?
-12. Is there a community of customers where they can engage with the products? ...
-
-<p>Data Information at: https://www.kaggle.com/c/rossmann-store-sales</p>
-
-<p>First Deploy is Telegram Bot</p>
-
-![rossbot](https://user-images.githubusercontent.com/75986085/155425763-b8051e72-e81a-4287-a43e-d2fdc4e35adf.gif)
-
-<p>Second Deploy executable software.</p>
-<p>In Dev</p>
-
-<h2>1. Business Problem</h2>
-
-<p>Rossman's CFO would like to predict how much money its stores will generate to renovate them in the future.</p>
-<p>Rossmann CFO, asked to all of shops merchant's to send for him this prediction, with this problem, all rossmann's merchant's asked to data/analisys team this prediction.</p>
-<p>New Version of project (04/02/2021)</p>
-
-<h2>2. Solution Strategy & Assumptions </h2>
-<h3>First CRISP Cycle</h3>
-
-<h4>2.1. After Stakeholder Interview</h4>
-
-> *How might we identify the budget needed for stores reformation?*
-
-<h4>2.2. Data Product</h4>
-
-> *A.I Model to forecast the sales at smartphone*
-
-<ul>
-  <dl>
-    <dt>Data Clearing & Descriptive Statistical.</dt>
-      <dd>First real step is download the dataset, import in jupyter and start in seven steps to change data types, data dimension, fillout na... At first statistic dataframe, i used simple statistic descriptions to check how my data is organized.</dd>
-    <dt>Feature Engineering.</dt>
-      <dd>In this step, with coggle.it to make a mind map and use the mind map to create some hypothesis list, after this list, i created some new features based on date.</dd>
-    <dt>Data Filtering.</dt>
-      <dd>Simple way to reduce dimensionality of dataset.</dd>
-    <dt>Exploration Data Analysis.</dt>
-      <dd>Validation of all hypotesis list with data.</dd>
-    <dt>Data Preparation.</dt>
-      <dd>Split & Prepare and Prepare & Split, this two versios of preparation can provide data leak.</dd>
-    <dt>Machine Learning Modeling.</dt>
-      <dd>Selection of Four ML Models, Base, Linear and two Tree-Based.</dd>
-  </dl>
-</ul>
-
-<h2>3. EDA Insight's</h2>
-
-<p>After brainstorming and hypothesis validation, some insights appeared.</p>
-<h3> Top 3 Insight's </h3>
-<ul>
-  <li>Stores with large assortment, sell less.</li>
-
-![sales](https://user-images.githubusercontent.com/75986085/153096505-fe9a9afb-f6e6-451d-a85d-d5579839071d.jpeg)
-
-  
-  <li>Stores with consecutive promo, sell less if long time of promo.</li>
-  
-![promo](https://user-images.githubusercontent.com/75986085/153096571-6f01a3b5-a87c-487d-acdd-7c1592e379c3.jpg)
-
-  
-  <li>Stores with closely competitors, sell more.</li>
-  
-![less](https://user-images.githubusercontent.com/75986085/153096584-eb58b3c4-2d4e-457e-a7f8-82ef6f9b5604.jpg)
-  
-</ul>
-
-<h2>4. Data Preparation</h2>
-<p>When you have "date" features on dataset, its possible to you get data leak during model training. I have selected two tipes of preparation, one splited train and test after data preparation, and before data preparation to check the data leakege.</p>
-<ul>
-  <dl>
-    <dt>Categorical Data.</dt>
-      <dd>Used the Frequency Encoding to all Categorical Data.</dd>
-    <dt>Normalization.</dt>
-      <dd>After KStest and QQplot, it was not necessary to normalize, because dont have normal distribution.</dd>
-    <dt>Nature Transformation.</dt>
-      <dd>Working with Sin/Cos for seasonal data.</dd>
-  </dl>
-</ul>
-<h3>4.1. Frequency Encoding</h3>
-<p>It is an encoder method that takes into account the number of times the value appears, for example in 10 records, 5 of which are blue and red, so the frequency is .5%
-</p>
-
-<h3>4.2. QQPlot</h3>
-<p>With QQPlot Quantile-Quantile Plot it is possible to observe how close the tested distribution is to a normal distribution, the normal distribution is characterized when blue line is equal to red line, there are other ways of doing this verification such as statistical tests, among others.</p>
-
-![1](https://user-images.githubusercontent.com/75986085/154390648-3e89fe22-c6f8-4e65-ac09-b025e364766a.png)
-
-<h3>4.3. Feature Selection</h3>
-<p>XGBoost Feature Importance is a fast and good way to see which feature is important, feature selection is a second way to select features for better performace of model and following the principles of Occam's Razor.</p>
-
-![feature_importance](https://user-images.githubusercontent.com/75986085/154825186-179f4ce0-86f8-4add-96ac-4138eed46c62.png)
-
-<p>Feature selection is one of most importante step on data science projects.</p>
-
-<h2>5. Machine Learning Models</h2>
-<p>I have used three models, SVR (Support Vector Regression), Random Forest and XGBoost (Gradient boosted decision tree).</p>
-
-![models](https://user-images.githubusercontent.com/75986085/154582560-384c54b0-c4a3-4e11-8862-5905ac12c197.png)
-
-<p>I have selected the XGBoost than all of other two for production, in the step of hyperparameter fine tuning I used a tuning technique called Random Search and tested the trained model in the dataset with data leakage and in the dataset without data leakage. The information are in Notebook m03_machine_learningII.</p>
-
-<p>Neural Network performace for aprox 40 epochs.</p>
-
-![nn](https://user-images.githubusercontent.com/75986085/155723418-ae002196-8c5f-40a3-85be-0e74ba9337ea.png)
+## Contacte me:
+[<img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />](https://www.linkedin.com/in/marianaborgal/)
+[![Gmail Badge](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white&link=mailto:mariana.albor@gmail.com)](mailto:mariana.albor@gmail.com)
 
 
-<h2>6. Bussiness Results</h2>
-<p>This istep is to convert the model performace in money!!.</p><p>Below have model performace for two of the mos harder shops to forecast, there are stores where the algorithm cannot predict sales, so the RMSE error was high. MAE error be greater too, to avoid this is train more the model and work on better features. Have two columns, worst & best scenario, this columns is the sum and subtraction respectively os MAE for each model forecast.</p>
+---
+## 1. Business Problem
+Rossmann is a pharmacy chain that operates over 3,000 stores in 7 European countries. The stores are going to be renovated and the CFO needs to know how much can be invested in each one of them. <br>
+The Data Scientist was requested to develop a sales prediction model that  forecast the sales for the next 6 weeks for each store. Therefore, the telegram bot must return this sales prediction for the given store.
 
-![hard_shops](https://user-images.githubusercontent.com/75986085/155026649-f00b6e31-740c-465e-b67c-ddccee4342e8.png)
+## 2. Business Results
+The model developed predicts a gross income of $286.69 MM in the next 6 weeks for the stores available, where the best and worst case scenarios results on $313.65 MM and $259.73 MM, respectively. These scenarios were calculated based on mean absolute percentage error for each store.
+<br>
 
-<p>Below have the Sum of sales for each senario.</p>
+## 3. Business Assumptions
+* The data available is only from 2013-01-01 to 2015-07-31.
+* Stores without information on distance from competitors are considered without competition nearby.
+* Seasons of the year:<br>
+   * Spring starts on March 1st<br>
+   * Summer starts on June 1st<br>
+   * Fall starts on September 1st<br>
+   * Winter starts on December 1st<br>
+<details><summary>The variables on original dataset goes as follows:</summary><br>
 
-![model_money](https://user-images.githubusercontent.com/75986085/155026940-46e5fd45-4d2c-4287-bf5e-ae2ccea0cbf8.png)
+Variable | Definition
+------------ | -------------
+|store | unique ID for each store|
+|days_of_week | weekday, starting 1 as Monday. |
+|date | date that the sales occurred |
+|sales | amount of products or services sold in one day  |
+|customers | number of customers |
+|open | whether the store was open (1) or closed (0)|
+|promo | whether the store was participating on a promotion (1) or not (0)|
+|sate_holiday | whether it was a state holiday (a=public holiday, b=easter holiday, c=christmas) or not (0) |
+|store_type | designates the store model as a, b, c or d. |
+|assortment | indicates the store assorment as: a=basic, b=extra, c=extended |
+|competition_distance | distance in meters to the nearest competitor store |
+|competition_open_since_month | the approximate month competitor was opened |
+|competition_open_since_year | the approximate year competitor was opened |
+|promo2 | wheter the store was participating on a consecutive promotion (1) or not (0)|
+|promo2_since_week | indicates the calendar week the store was participating in promo2 |
+|promo2_since_year | indicates the year the store was participating in promo2 |
+|promo2_interval | indicates the intervals in which promo2 started |
+</details>
 
-<h2>7. Model Deployment</h2>
-<p>For deployment i selected Heroku for base clound 24/7h free.</p>
-<p>Made a Telegram Bot and Personal '.exe' app for CFO to check the sales on smartphone and desktop.</p>
+<details><summary>Variables created during the project development goes as follow:</summary><br>
 
-![sales](https://user-images.githubusercontent.com/75986085/155308939-12f879ae-bdde-41f7-b02d-dade281606b6.png)
+Variable | Definition
+------------ | -------------
+| year | year from date that the sales occurred |
+| month | month from date that the sales occurred |
+| day | day from date that the sales occurred |
+| week_of_year | week of the year from date that the sales occurred, considering the first week of a year a thursday and begins at 1. (int type) |
+| year_week | week of the year from date that the sales occurred, considering the first week of a year with a monday and begins at 0. (object type, %Y-%W) |
+| season | season from date that the sales occurred |
+| competition_open_since | concatenation of 'competition_open_since_year' and 'competition_open_since_month' |
+| competition_open_timeinmonths | calculates the time in months that competitor has been open based on the purchased date |
+| promo2_since | concatenation of 'promo2_since_year' and 'promo2_since_week' |
+| promo2_since_timeinweeks | calculates the time in weeks that promotion began based on the purchased date |
+| month_map | month from date that the sales occurred as auxiliar feature |
+| is_promo2 | whether the purchase occurred during an active promo2 (1) or not (0)  |
+<!-- | x | xxx | -->
+</details><br>
 
-![img](https://user-images.githubusercontent.com/75986085/155615627-dcbe0fd7-6116-4a91-ae17-40d4e5ee3e8b.png)
+## 4. Solution Strategy
+1. Data Description
+2. Feature Engineering
+3. Data Filtering
+4. Exploratory Data Analysis
+5. Data Preparation
+6. Feature Selection
+7. Machine Learning Modeling
+8. Hyper Parameter Fine Tuning
+9. Model-to-Business Interpretation
+10. Model Deploy  
+<br>
 
-<h2>7. References</h2>
-<ul>
-  <li><a href='https://www.oreilly.com/library/view/practical-statistics-for/9781491952955/'>Practical Statistics Book</li>
-  <li><a href='https://www.strategyzer.com/books/business-model-generation'>Model Bussiness Book</li>
-  <li><a href='https://www.docusign.com.br/blog/indicadores-do-varejo'>Retail Metrics</li>
-  <li><a href='https://www.kaggle.com/bhavikapanara/frequency-encoding'>Frequency Encoding</li>
-  <li><a href='https://en.wikipedia.org/wiki/Gradient_boosting'>Gradient Boosting</li>
-  <li><a href='https://en.wikipedia.org/wiki/Occam%27s_razor'>Occam's Razor</li>
-  <li><a href='https://machinelearningmastery.com/hyperparameter-optimization-with-random-search-and-grid-search/'>Random Search Tuning</li>
-</ul>
+## 5. Top 3 Data Insights
+**1. Distance from competitors does not seem to correlate with store sales.** 
+<img src="https://user-images.githubusercontent.com/77681284/152861743-97d3a616-0ea7-4129-b250-4fe99f025f9d.png">
+
+**2. Stores sold more in the seconde semester in 2013, but not in 2014.**
+<img src="https://user-images.githubusercontent.com/77681284/152862286-1c72acf6-ddbb-47f0-84c0-827ed6029f7d.png">
+
+**3. Sales during the sring correspond to 41.41% of total.**<br>
+<img src="https://user-images.githubusercontent.com/77681284/152863943-f8b28f40-5e6f-4c9b-9aec-b035d8f66a32.png">
+<br>
+
+## 6. Machile Learning Model
+Machine learning models used:
+* Linear Regression
+* Regularized Linear Regression
+* Random Forest Regressor
+* Xgboost Regressor <br><br>
+
+Results after cross-validation, where:
+MAE = mean absolute error;
+MAPE = mean absolut percentage error;
+RSME = root mean squared error.<br><br>
+![image](https://user-images.githubusercontent.com/77681284/152865017-82031281-0faa-4621-ac08-e7ef30bf4dd3.png)
+
+Final xgboost result after fine tunning:<br><br>
+![image](https://user-images.githubusercontent.com/77681284/152865128-2ffe1a2e-ab84-405d-a323-44af6c71d95e.png)
+
+Error rate: <br>
+![image](https://user-images.githubusercontent.com/77681284/152866889-f0980683-cf4f-4912-b5e8-ba00f8f41887.png)
+
+
+## 7. Telegram Bot
+Access telgram bot [here](https://t.me/rossmannMBA_bot).<br>
+![image](https://user-images.githubusercontent.com/77681284/152866141-84e53ce0-b44d-4e25-8614-dce0e3b36368.png)
+
+
+## 8. Conclusion
+The objective of this project was develop a prediction model for Rossmann stores. Developing the telegram bot as the data deliverable product successfully satisfies the CFO demands.
+
+## 9. Next Steps
+* Address missing values in a better way.
+* Test other machine learning models.
+* Improve messages on telegram bot.
+
+----
+**References:**
+* Blog [Seja um Data Scientist](https://sejaumdatascientist.com/eu-criei-esse-projeto-e-consegui-meu-primeiro-emprego-como-data-scientist/)
+* Dataset Rossmann Store Sales from [Kaggle](https://www.kaggle.com/c/rossmann-store-sales/overview)
+* Variables meaning on [Kaggle](https://www.kaggle.com/c/rossmann-store-sales/data)
+
+----
+## Contacte me:
+[<img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />](https://www.linkedin.com/in/marianaborgal/)
+[![Gmail Badge](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white&link=mailto:mariana.albor@gmail.com)](mailto:mariana.albor@gmail.com)
