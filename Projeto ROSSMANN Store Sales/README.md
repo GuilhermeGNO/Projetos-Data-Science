@@ -1,135 +1,209 @@
-# Previsão de vendas para uma cadeias de farmácias Rossmann
+# Projeto de Insights: House Rocket
 
-![home](https://www.gsmmaniak.pl/wp-content/uploads/gsmmaniak/2019/03/rossmann-wypuscil-promocje-w-black-friday-ale-mocno-sie-przeliczyl-rozwscieczeni-klienci-skladaja-skargi-zwykle-zlodziejstwo-2389046.jpg) 
+O objetivo desse projeto é fornecer para o CEO e time de corretores da empresa, uma seleção de imóveis, para que a empresa possa realizar investimentos e obter o máximo lucro na compra e venda desses imóveis.
 
-Este repositório contém os códigos realizados para realizar a previsão de vendas para as cadeias de farmácias da Rossmann. <br>
-Os dados utilizados para esse projeto foram retirados do seguinte entedeço: [Rossmann Sales Prediction](https://www.kaggle.com/c/rossmann-store-sales).
+Para visualização dos resultados, será disponibilizada na Web, utilizando a ferramenta Streamlit, a possibilidade ao CEO e a equipe de corretores acesso a tais informações com disponibilidade de 24/7, bastando ter um dispositivo que tenha conexão com a internet.
 
-#### Projeto - Previsão de Vendas:
-Os principais objetivos desse projeto são:
-* Analisar com ténicas de exploração de dados as vendas das lojas contidas em uma base de dados forneceida pela Rossmann.
-* Prever as vendas para as próximas 6 semanas para cada loja.
+O resultado geral obtido foi uma seleção de __10.604 imóveis__ (podendo ser variável de acordo com as condições/localizações) que corresponde a quase 50% dos imóveis do portfólio disponibilizado.
 
----
-## 1. Problema de negócio
-Rossmann is a pharmacy chain that operates over 3,000 stores in 7 European countries. The stores are going to be renovated and the CFO needs to know how much can be invested in each one of them. <br>
-The Data Scientist was requested to develop a sales prediction model that  forecast the sales for the next 6 weeks for each store. Therefore, the telegram bot must return this sales prediction for the given store.
+| __Número de imóveis__ | __Custo total__ | __Receita de vendas__ | __Lucro (profit)__ |
+| ----------------- | ----------------- | ----------------- | ----------------- |
+| 10.604 | US$ 4.141.568.273,00 | US$ 4.634.592.801,50 | US$ 493.024.528,50 |
 
-## 2. Resultado da análise para o Negócio
-The model developed predicts a gross income of $286.69 MM in the next 6 weeks for the stores available, where the best and worst case scenarios results on $313.65 MM and $259.73 MM, respectively. These scenarios were calculated based on mean absolute percentage error for each store.
-<br>
+Link para visualização:  [<img alt="Heroku" src="https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white"/>](https://apphr-def.herokuapp.com)
 
-## 3. Premissas do Negócio
-* The data available is only from 2013-01-01 to 2015-07-31.
-* Stores without information on distance from competitors are considered without competition nearby.
-* Seasons of the year:<br>
-   * Spring starts on March 1st<br>
-   * Summer starts on June 1st<br>
-   * Fall starts on September 1st<br>
-   * Winter starts on December 1st<br>
-<details><summary>Dicionário original dos dados:</summary><br>
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
-Variable | Definition
------------- | -------------
-|store | Identificar único de cada loja|
-|days_of_week | weekday, starting 1 as Monday. |
-|date | Data que foram realizadas as vendas |
-|sales | Quantidade de vendas e/ou produtos realizadas na data especifica |
-|customers | Quantidade de clientes que realizaram compras na data especifica |
-|open | Informação se a loja esta ou não aberta na data especifica, 1 aberta, 0 fechada |
-|promo | Informação se a loja estava participando de alguma promoção ou não, 1 estava participando, 0 não estava participando|
-|sate_holiday | whether it was a state holiday (a=public holiday, b=easter holiday, c=christmas) or not (0) |
-|store_type | designates the store model as a, b, c or d. |
-|assortment | indicates the store assorment as: a=basic, b=extra, c=extended |
-|competition_distance | distance in meters to the nearest competitor store |
-|competition_open_since_month | the approximate month competitor was opened |
-|competition_open_since_year | the approximate year competitor was opened |
-|promo2 | wheter the store was participating on a consecutive promotion (1) or not (0)|
-|promo2_since_week | indicates the calendar week the store was participating in promo2 |
-|promo2_since_year | indicates the year the store was participating in promo2 |
-|promo2_interval | indicates the intervals in which promo2 started |
-</details>
+## 1. A House Rocket
 
-<details><summary>Variables created during the project development goes as follow:</summary><br>
+### 1.1 Contexto do negócio:
 
-Variable | Definition
------------- | -------------
-| year | year from date that the sales occurred |
-| month | month from date that the sales occurred |
-| day | day from date that the sales occurred |
-| week_of_year | week of the year from date that the sales occurred, considering the first week of a year a thursday and begins at 1. (int type) |
-| year_week | week of the year from date that the sales occurred, considering the first week of a year with a monday and begins at 0. (object type, %Y-%W) |
-| season | season from date that the sales occurred |
-| competition_open_since | concatenation of 'competition_open_since_year' and 'competition_open_since_month' |
-| competition_open_timeinmonths | calculates the time in months that competitor has been open based on the purchased date |
-| promo2_since | concatenation of 'promo2_since_year' and 'promo2_since_week' |
-| promo2_since_timeinweeks | calculates the time in weeks that promotion began based on the purchased date |
-| month_map | month from date that the sales occurred as auxiliar feature |
-| is_promo2 | whether the purchase occurred during an active promo2 (1) or not (0)  |
-<!-- | x | xxx | -->
-</details><br>
+A House Rocket é uma plataforma digital que tem como modelo de negócio, a compra e a venda de imóveis usando a tecnologia para analisar suas melhores oportunidades.
 
-## 4. Abordagem para solução do problema
-1. Limpeza de dados
-2. Feature Engineering
-3. Filtragem de variáveis
-4. Exploração de dados
-5. Preparação dos dados
-6. Seleção de variáveis
-7. Aplicação de modelos de ML
-8. Fine-Tuning Hyperparameter
-9. Avaliação dos algoritmos
-10. Modelo em produção
-<br>
+O objetivo do case é fornecer insights para a empresa encontrar as melhores oportunidades de negócio no mercado de imóveis. O CEO da House Rocket gostaria de ***maximizar*** a receita da empresa encontrando ***boas oportunidades*** de negócio.
 
-## 5. Top 3 Data Insights
-**1. Distance from competitors does not seem to correlate with store sales.** 
-<img src="https://user-images.githubusercontent.com/77681284/152861743-97d3a616-0ea7-4129-b250-4fe99f025f9d.png">
+Sua principal estratégia é ***comprar boas casas*** em ótimas localizações com preços baixos e depois revendê-las posteriormente a preços mais altos. Quanto maior a diferença entre a compra e a venda, maior o lucro da empresa.
 
-**2. Stores sold more in the seconde semester in 2013, but not in 2014.**
-<img src="https://user-images.githubusercontent.com/77681284/152862286-1c72acf6-ddbb-47f0-84c0-827ed6029f7d.png">
+Entretanto, as casas possuem muitos atributos fato que as tornam mais ou menos atrativas aos compradores e vendedores, e a localização e conforme análise, o período do ano também podem influenciam os preços.
 
-**3. Sales during the sring correspond to 41.41% of total.**<br>
-<img src="https://user-images.githubusercontent.com/77681284/152863943-f8b28f40-5e6f-4c9b-9aec-b035d8f66a32.png">
-<br>
+### 1.2 Questão do negócio:
 
-## 6. Machile Learning Model
-Machine learning models used:
-* Linear Regression
-* Regularized Linear Regression
-* Random Forest Regressor
-* Xgboost Regressor <br><br>
+Considerando que:
 
-Results after cross-validation, where:
-MAE = mean absolute error;
-MAPE = mean absolut percentage error;
-RSME = root mean squared error.<br><br>
-![image](https://user-images.githubusercontent.com/77681284/152865017-82031281-0faa-4621-ac08-e7ef30bf4dd3.png)
+a) O time do negócio não consegue tomar boas decisões de compra sem analisar os dados,e;
 
-Final xgboost result after fine tunning:<br><br>
-![image](https://user-images.githubusercontent.com/77681284/152865128-2ffe1a2e-ab84-405d-a323-44af6c71d95e.png)
+b) O portfólio é muito grande, o que tomaria muito tempo para fazer o trabalho manualmente.
 
-Error rate: <br>
-![image](https://user-images.githubusercontent.com/77681284/152866889-f0980683-cf4f-4912-b5e8-ba00f8f41887.png)
+O objetivo desse projeto é fornecer uma seleção de imóveis, de acordo com  as melhores condições, para que a empresa possa realizar suas operações de compra e venda. 
+A proposta é demonstrar através de visualizações, quais as melhores oportunidades e qual resultado (lucro) máximo que pode ser alcançado.
 
+Em resumo, o projeto visa responder às seguintes perguntas de negócio:
 
-## 7. Telegram Bot
-Access telgram bot [here](https://t.me/rossmannMBA_bot).<br>
-![image](https://user-images.githubusercontent.com/77681284/152866141-84e53ce0-b44d-4e25-8614-dce0e3b36368.png)
+- Quais são os imóveis que a House Rocket deveria comprar e por qual preço ?
+ - Uma vez a casa comprada, qual o melhor momento para vendê-las e por qual preço ?
+
+### 1.3 Sobre os dados:
+
+Os dados foram extraídos do link abaixo, onde constam todos os imóveis em portfólio e disponíveis para a empresa.
+
+https://www.kaggle.com/harlfoxem/housesalesprediction
+
+Abaixo uma tabela com os atributos e descrição do conjunto de dados:
+
+|***Atributo*** | ***Descrição*** |
+| -------- | --------- |
+|**id** | Identificação de cada imóvel | 
+|**date** | Data de quando a venda foi realizada |
+|**price** | Preço que a casa foi vendida pelo proprietário |
+|**bedrooms** | Número de quartos |
+|**bathrooms** | Número de banheiros (0.5 = banheiro em um quarto, mas sem chuveiro) |
+|**sqft_living** | Medida em pés quadrados dos espaços interiores dos apartamentos |
+|**sqft_lot** | Medida em pés quadrados  |
+|**floors** | Número de andares | 
+|**waterfront** | Indica se o imóvel possui vista para água (0 = não e 1 = sim) | 
+|**view** | Um índice de 0 a 4 que indica a qualidade da vista da propriedade. Varia de 0 a 4, onde: 0 = baixa 4 = alta | 
+|**condition** | Um índice de 1 a 5 que indica a condição da casa. Varia de 1 a 5, onde:1 = baixo 5 = alta | 
+|**grade** | Um índice de 1 a 13 que indica a construção e o design do edifício. Varia de 1 a 13, onde: 13 = baixo, 7 = médio e 1113 = alta | 
+|**sqft_basement** | Medida em pés quadrados  | 
+|**yr_built** | Ano de construção | 
+|**yr_renovated** | Ano de reforma | 
+|**zipcode** | CEP da casa | 
+|**lat** | Latitude | 
+|**long** | Longitude | 
+|**sqft_livining15** | Medida em pés quadrado do espaço interno de habitação para os 15 vizinhos mais próximo | 
+|**sqft_lot15**| Medida (em pés quadrado) dos lotes de terra dos 15 vizinhos mais próximo | 
+
+*Além do dataset acima citado, foi utilizado um arquivo geojson para a criação de mapas de densidade. A API foi extraída do site ArcGIS Hub, https://opendata.arcgis.com/datasets/83fc2e72903343aabff6de8cb445b81c_2.geojson *
+
+### 1.5 Premissas do negócio:
+
+Dentro do processo de entendimento de negócio, exploração dos dados e decisão para fornecer os insights finais, foram adotadas as seguintes premissas:
+
+- A coluna *price* significa o preço que a casa foi ou será comprada pela empresa House Rocket;
+- Os valores iguais a zero em *yr_renovated* são casas que nunca foram reformadas;
+- As informações do __preço mediano da região __ e a __condição__  foram características decisivas recomendação de compra ou não comprar dos imóveis
+- Para as condições dos imóveis, foi determinada a seguinte classificação: __1 = muito ruim, 2 = ruim, 3 = regular, 4 = bom e 5 = muito bom__
+- Como a sazonalidade também influencia diretamente a demanda por investimento em imóveis, a estação do ano foi a característica decisiva para a época da venda do imóvel. Foram assumidos valores medianos de acordo com sua região e sazonalidade. As épocas do ano, foram determinadas de acordo com as data de estação do ano da cidade Kings County USA, cidade ao qual pertence o conjunto de dados.
+-Uma das premissas mais relevantes, a recomendação do preço de venda, foi aplicada o seguinte cálculo, quando o preço de compra for menor do que a mediana da região + mediana da sazonalidade, foi aplicado um percentual de 30% para venda do imóvel, sendo que este valor não poderá passar do valor da mediana da região  + mediana sazonalidade, para casos como esse, serão considerados os valores da mediana da região + mediana da sazonalidade. Para preços acima da mediana da região + mediana da sazonalidade, foi aplicado o percentual de 10% em relação ao preço de compra.
+-Imóvel com informação de 33 quartos, foi interpretado como erro de digitação e foi assumido o valor de 3 quartos, já que após análise de imóveis parecidos, foi concluido que quantidade de 3 seria plausível.
+-Não foi encontrado motivos para deixar no conjunto de dados, imóveis com quantidade de banheiros iguais a 0, por isso todos os registros desse tipo (total 10) foram retirados do conjunto de dados.
+
+## 2. Planejamento da solução:
+
+### 2.1  Exploração de dados:
+
+A primeira etapa do projeto foi realizar a coleta, tratamento e exploração dos dados. Nessa etapa foi possível realizar identificar necessidades de limpeza e transformação de dados, realizar uma análise das estatísticas descritivas dos conjuntos de dados, e ainda realizar a criação de novas *features* para facilitar e proporcionar as visualizações e criações dos insights que serão apresentados. A motivação da criação das novas features serão explanadas em outro momento.
+
+- Estatísticas descritivas:
+
+| **attributes** | **maximum**|  **minimum** |  **mean** |  **median** |  **std** | 
+| -------- | --------- |---------| -------- | --------- |--------- |
+| price | 7700000.00 | 75000.00 | 541645.37 | 450000.00 | 367314.32 |
+| bedrooms | 11.00 | 0.00 | 3.37 | 3.00 | 0.91 |
+| bathrooms | 8.00 | 0.00 | 2.12 | 2.25 | 0.77 |
+| sqft_living | 13540.00 | 290.00 | 2082.73 | 1920.00 | 919.14 |
+| sqft_lot | 1651359.00 | 520.00 | 15136.06 | 7614.00 | 41538.57 |
+| floors | 3.50 | 1.00 | 1.50 | 1.50 | 0.54 | 
+| view | 4.00 | 0.00 | 0.24 | 0.00 | 0.77 |
+| condition | 5.00 | 1.00 | 3.41 | 3.00 | 0.65 |
+| grade | 13.00 | 1.00 | 7.66| 7.00| 1.17 |
+| sqft_above| 9410.00| 290.00| 1791.00| 1560.00| 829.01 |
+| sqft_basement| 4820.00| 0.00| 291.73| 0.00| 442.78 |
+| yr_built| 2015.00| 1900.00| 1971.10| 1975.00| 29.38 |
+| yr_renovated| 2015.00| 0.00| 84.73| 0.00| 402.43 |
+| sqft_living15| 6210.00| 399.00| 1988.35| 1840.00| 685.68 |
+| sqft_lot15| 871200.00| 651.00| 12786.34| 7620.00| 27375.41 |
 
 
-## 8. Conclusion
-The objective of this project was develop a prediction model for Rossmann stores. Developing the telegram bot as the data deliverable product successfully satisfies the CFO demands.
+| **attributes** | **mean**|  **minimum** |  **max** |  **std** |  **median** | 
+| -------- | --------- |---------| -------- | --------- |--------- |
+|price	|541693.6|	|78000|	|7700000|	|367296.43|	|450000|
+|bedrooms	|3.37|	|0|	|11|	|0.9|	|3|
+|bathrooms	|2.12|	|0.5|	|8|	|0.77|	|2.25|
+|sqft_living	|2082.91|	|370|	|13540|	|918.85|	|1920|
+|sqft_lot	|15135.1|	|520|	|1651359|	|41547.34|	|7613.5|
+|floors	|1.5|	|1|	|3.5|	|0.54|	|1.5|
+|waterfront	|0.01|	|0|	|1|	|0.09|	|0|
+|view	|0.24|	|0|	|4|	|0.77|	|0|
+|condition	|3.41|	|1|	|5|	|0.65|	|3|
+|grade	|7.66|	|3|	|13|	|1.17|	|7|
+|sqft_above	|1791.03|	|370|	|9410|	|828.7|	|1560|
+|sqft_basement	|291.88|	|0|	|4820|	|442.84|	|0|
+|yr_built	|1971.1|	|1900|	|2015|	|29.39|	|1975|
+|yr_renovated	|84.77|	|0|	|2015|	|402.52|	|0|
+|zipcode	|98077.87|	|98001|	|98199|	|53.47|	|98065|
+|lat	|47.56|	|47.16|	|47.78|	|0.14|	|47.57|
+|long	|-122.21|	|-122.52|	|-121.31|	|0.14|	|-122.23|
+|sqft_living15	|1988.36|	|399|	|6210|	|685.47|	|1840|
+|sqft_lot15	|12783.86|	|651|	|871200|	|27380.23|	|7620|
+|month	|6.56|	|1|	|12|	|3.12|	|6|
 
-## 9. Next Steps
-* Address missing values in a better way.
-* Test other machine learning models.
-* Improve messages on telegram bot.
 
-----
-**References:**
-* Blog [Seja um Data Scientist](https://sejaumdatascientist.com/eu-criei-esse-projeto-e-consegui-meu-primeiro-emprego-como-data-scientist/)
-* Dataset Rossmann Store Sales from [Kaggle](https://www.kaggle.com/c/rossmann-store-sales/overview)
-* Variables meaning on [Kaggle](https://www.kaggle.com/c/rossmann-store-sales/data)
+- Novas features:
+-*standard*: Padrão das casas pelo valor de vendar; Imóveis com preço acima de 540 k  foram considerados de alto padrão(high_standard), imóveis abaixo de 540 k  foram consideras de baixo padrão (low_standard)
+-*dormitory_type*: Tipo do imóvel (house, studio, apartment); Imóveis com o tipo de 'bedrooms' iguais a 1 foram considerados como 'studio', 'bedrooms' iguais a 2 foram considerados do tipo apartamento (apartment) e dormitórios iguais a 3 foram considerados como 'house'.
+-*condition_type*: Condição do imóvel (very bad, bad, regular, good, very good); Imóveis com 'condition' iguais a 1 foram considerados imóveis muito ruins (very bad), imóveis com valores iguais a 2 foram considerados imóveis ruins (bad), imóveis com valores iguais a 3, foram considerados imóveis de qualidade mediada (regular), imóveis iguais a 4 foram considerados de boa qualidade (good) e valores iguais a 5 foram considerados imóveis muito bons (very good).
+-  *construction:* ano de construção maior ou menor que 1955;
+- *basement:_status* imóvel com ou sem porão
+- *month:* mês que o imóvel ficou disponível para venda
+- *season:* estação do ano que o imóvel ficou disponível para venda; Dos meses de Março (3) a Maio (5), foi considerado estação 'spring', dos meses de Junho (6) a Agosto (8) foi foram considerados 'summer', os meses de Setembro (9) a Novembro (11) foram considerados 'fall' e dos meses de Dezembro (12) a Fevereiro (2) foram considerados 'winter'.
+- *waterfront_status:* vista ou não para água; Com referência ao atributo 'waterfront', valores iguais a 0 foram considerados como que 'no', ou seja, não possuem vista para a água, valores iguais a 1 foram considerados  como 'yes', ou seja, possuem vista para água.
+- *renovated_status:* imóvel foi ou não reformado;  Valores na coluna 'yr_renovated' iguais a zero foram consideados como imóveis que não foram renovados, imóveis que foram encontrados algum registro foram considerados como imóveis renovados.
+-*year*: Ano da data de venda/disponibilidade para venda do imóvel
+-*year_month*: Mês e ano de venda/disponibilidade do imóvel
+-*recomendation*: Coluna de recomendação de compra ou não de um imóvel
+-*sell_price*: recomendação do valor que os imóveis deveriam ser comprados
+-*profit*:
 
-----
+### 2.2  Seleção dos imóveis:
+
+Todo planejamento dessa solução foi pensando na criação de um aplicativo de visualização, onde a empresa poderá consultar a seleção dos imóveis, seus insights e outras informações inerentes às perguntas de negócio.
+
+Para iniciar a montagem das visualizações, foram realizados os seguintes passos para cada pergunta de negócio:
+
+__a) Quais são os imóveis que a House Rocket deveria comprar e por qual preço ?__
+- Agrupado os imóveis por região ( *zipcode* );
+- Dentro de cada região, foi encontrada a mediana do preço do imóvel;
+- Essa mediana foi retornada em cada linha do dataset para ser possível a comparação;
+- Foi assumida a seleção dos imóveis que estão abaixo ou igual ao preço mediano da região e que estejam em boas condições - *condition* com valor iguais a e acima de 3.
+- O próximo passo foi a criação de uma feature auxiliar para receber a indicação se o imóvel deve ou não ser comprado. Ou seja, se o imóvel estiver com preço abaixo da mediana da região e, estiver em condição “regular”(3) , “good” (4) ou “very good” (5), o imóvel é selecionado.
+
+__b) Uma vez a casa comprada, qual o melhor momento para vendê-las e por qual preço ?__
+- Agrupar os imóveis selecionados na questão 1 por região ( *zipcode* ) e também por temporada (*season*);
+- Dentro de cada região e temporada, foi encontrada a mediana do preço do imóvel;
+- Para cálculo do valor de venda, foram assumidas as seguintes condições, as quais foram aplicadas em novas features criadas - ***sell_price e profit:***
+
+   1. Se o preço da compra for maior que a mediana da região + sazonalidade. O preço da venda será igual ao preço da compra + 10%
+   2. Se o preço da compra for menor que a mediana da região + sazonalidade. O preço da venda será igual ao preço da compra + 30% valor que não seja maior que a região + sazonalidade, caso o valor seja maior, será considerado o valor da região + sazonalidade
+
+### 3. Portfólio total:
+
+Tendo todo entendimento do negócio, e respondida as perguntas de negócio, foram levantadas algumas hipóteses para serem validadas, com o objetivo de gerar insights para próximas questões de negócio ou mesmo gerar novas estratégias para a House Rocket:
+
+| __Hipótese__ | __Resultado__ | __Tradução para negócio__ |
+| ------------ | ------------ | ------------ |
+| __H1__ -Imóveis que possuem vista para água, são em média 30% mais caros | Verdadeira | Imóveis com vista para água são em média 212% mais caros. Procurar investir em imóveis sem vista para água, por terem custo de negócio menor |
+| __H2__ - Imóveis com data de construção menor que 1955 são em média 50% mais baratos | Falsa | A diferencia média dos valores é de apenas 1%. Investir em imóveis independente da data de construção |
+| __H3__ - Imóveis sem porão são em média 50% maiores do que imóveis com porão | Falsa | Casas sem porão são apenas 19% maiores que casa sem porão. Caso seja estretegia da House Rocket, é segerido investimento em imóveis sem porão, pois oferecem maior área de terreno |
+| __H4__ - O crescimento do preço dos imóveis entre os anos de 2014 e 2015 é em média de 10%  | Falsa | Não houve considerável crescimento no preço médio entre os anos (cerca de somente 0.22%). Ou seja, o período analisado teve preços médios próximos, sem variações que poderia ser estudadas como anormalidades |
+| __H5__ - Imóveis com 3 banheiros tem um crescimento MoM (month of month) de 15% | False | Em média o crescimento MoM das casas com 3 banheiros é de somente 0.18% |
+| __H6__ - Imóveis com 2 andares são em média 15% mais caros do que aqueles com somente um andar | Verdadeira | Imóveis com 2 andares são em média 26.58% mais caros do que imóveis com apenas um andar. |
+| __H7__ - A maioria dos imóveis tornou-se disponível durante as estações 'summer/spring' | Verdadeira | Cerca de 59% dos imóveis ficaram disponíveis nessa época do ano |
+| __H8__ - Imóveis disponíveis durante summer/spring são em média 20% mais caros | False | Imóveis disponíveis entre summer/spring são apenas em média 5% mais caros |
+| __H9__ - Imóveis que foram reformado, são em média 40% mais caros | Verdadeira | Em média os imóveis reformados são cerca de 43.28% mais caros |
+
+## 4. Resultados financeiros:
+
+O objetivo desse projeto era fornecer uma lista de imóveis com opções de compra e venda, e consequentemente o __lucro máximo__ que poderá ser obtido se todas as transações ocorrerem. Ou seja, o resultado financeiro apresentado abaixo representa o lucro máximo que pode ser obtido utilizando as recomendações informadas:
+
+| __Número de imóveis__ | __Custo total__ | __Receita de vendas__ | __Lucro (profit)__ |
+| ----------------- | ----------------- | ----------------- | ----------------- |
+| 10.604 | US$ 4.141.568.273,00 | US$ 4.634.592.801,50 | US$ 493.024.528,50 |
+
+Todavia cabe reforçar, que o lucro pode ser explorado por condições e região dos imóveis, onde as visualizações fornecidas demonstram todo resultado do projeto, assim como o resultado financeiro, de forma customizada para as opções escolhidas.
+
+## 5. Conclusão:
+
+O projeto tem como princípio a geração de insights para o negócio, assim como responder algumas perguntas feitas pela empresa. O objetivo foi concluído, e foi possível extrair informações relevantes e com potencial forma de gerar direcionamento para as próximas operações da House Rocket.
+
+As visualizações fornecidas irão permitir com que a empresa possa avaliar as regiões mais lucrativas, os atributos que levam o imóvel a se tornar mais viável para as operações de compra e venda, e ainda visualizar o lucro máximo que poderá ser alcançado de acordo com as opções de negócio.
