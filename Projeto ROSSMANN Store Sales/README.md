@@ -1,13 +1,12 @@
-# Previsão de vendas para uma cadeias de farmácias RossmannP002 Sales Predictions for a Drugstore Chain
-Sales prediction for a drugstore chain.
+# Previsão de vendas para uma cadeias de farmácias Rossmann
 
 ![home](https://www.gsmmaniak.pl/wp-content/uploads/gsmmaniak/2019/03/rossmann-wypuscil-promocje-w-black-friday-ale-mocno-sie-przeliczyl-rozwscieczeni-klienci-skladaja-skargi-zwykle-zlodziejstwo-2389046.jpg) 
 
-This repository contains codes for the sales predictions for Rossman drugstores. <br>
-The data used was available on [Kaggle](https://www.kaggle.com/c/rossmann-store-sales). All additional information below are fictional
+Este repositório contém os códigos realizados para realizar a previsão de vendas para as cadeias de farmácias da Rossmann. <br>
+Os dados utilizados para esse projeto foram retirados do seguinte entedeço: [Rossmann Sales Prediction](https://www.kaggle.com/c/rossmann-store-sales). All additional information below are fictional
 
 #### Projeto - Previsão de Vendas:
-Os prncipais objetivo desse projeto são::
+Os principais objetivo desse projeto são::
 * Analisar com ténicas de exploração de dados as vendas das lojas contidas em uma base de dados forneceida pela Rossmann.
 * Prever as vendas para as próximas 6 semanas para cada loja.
 
