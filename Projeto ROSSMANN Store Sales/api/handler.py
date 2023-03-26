@@ -7,7 +7,7 @@ import pickle
 
 
 # loading the model
-model = pickle.load(open('/home/guilinux/repos/Comunidade-DS/02.ds_em_producao/model/model_rossman.pkl', 'rb'))
+model = pickle.load(open('model/model_rossman.pkl', 'rb'))
 
 # initialize API
 app = Flask( __name__ )
