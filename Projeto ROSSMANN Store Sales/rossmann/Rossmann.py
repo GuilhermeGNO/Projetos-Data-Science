@@ -7,12 +7,12 @@ import datetime
 
 class Rossmann(object):
     def __init__( self ):
-        self.path = '/home/guilinux/repos/Comunidade-DS/02.ds_em_producao/parameter/' 
-        self.competition_distance_scaler    = pickle.load( open( self.path + 'competition_distance_scaler.pkl', 'rb'))
-        self.competition_time_month_scaler  = pickle.load( open( self.path + 'competition_time_month_scaler.pkl', 'rb'))
-        self.promo_time_week_scaler         = pickle.load( open( self.path + 'promo_time_week_scaler.pkl', 'rb'))
-        self.year_scaler                    = pickle.load( open( self.path + 'year_scaler.pkl', 'rb'))
-        self.store_type_scaler              = pickle.load( open( self.path + 'store_type_scaler.pkl', 'rb'))
+        self.path = '' 
+        self.competition_distance_scaler    = pickle.load( open( self.path + 'parameter/competition_distance_scaler.pkl', 'rb'))
+        self.competition_time_month_scaler  = pickle.load( open( self.path + 'parameter/competition_time_month_scaler.pkl', 'rb'))
+        self.promo_time_week_scaler         = pickle.load( open( self.path + 'parameter/promo_time_week_scaler.pkl', 'rb'))
+        self.year_scaler                    = pickle.load( open( self.path + 'parameter/year_scaler.pkl', 'rb'))
+        self.store_type_scaler              = pickle.load( open( self.path + 'parameter/store_type_scaler.pkl', 'rb'))
         
     def data_cleaning(self, df1):
         
