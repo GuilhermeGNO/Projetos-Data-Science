@@ -1,3 +1,4 @@
+![Rossmann_logo](https://user-images.githubusercontent.com/60413561/229098308-6aa66921-8cf9-4308-84a5-ca0adfdc5d04.jpg)<br>
 # Projeto de Previsão de Vendas: Drogarias Rossmann
 
 O objetivo desse projeto é fornecer para o CFO e Gerentes das Lojas ,uma previsão de faturamento no final de 6 semanas, para que o CFO possa planejar e alocar valores para futuras reformas das lojas.
