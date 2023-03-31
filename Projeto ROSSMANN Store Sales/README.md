@@ -132,9 +132,9 @@ Funcionamento do Bot Telegram, o usuário deverá escrever o comando / + número
 
 # 4. Conclusão e pontos de melhorias:
 
-O projeto tem como princípio a geração de insights para o negócio, assim como responder algumas perguntas feitas pela empresa. O objetivo foi concluído, e foi possível extrair informações relevantes e com potencial forma de gerar direcionamento para as próximas operações da House Rocket.
+O projeto tem como principal objetivo a geração a previsão das receitas das lojas, objetivo que foi alcançado conforme demonstramos nessa apresentação, assim como a geração de insights para apoio a empresa e principalemente para a equipe de marketing. O objetivo foi concluído, e foi possível extrair informações relevantes e com potencial forma de gerar direcionamento para as próximas operações da Rossmann.
 
-As visualizações fornecidas irão permitir com que a empresa possa avaliar as regiões mais lucrativas, os atributos que levam o imóvel a se tornar mais viável para as operações de compra e venda, e ainda visualizar o lucro máximo que poderá ser alcançado de acordo com as opções de negócio.
+As visualizações fornecidas irão permitir com que a empresa possa avaliar as lojas mais lucrativas, os atributos que levam a loja a se tornar mais viável para as reformas, e ainda visualizar o melhor e pior cenário que poderá ser alcançado de acordo com as escolhas gerenciais e estratégicas da empresa.
 
 Pontos de Melhorias:
 
