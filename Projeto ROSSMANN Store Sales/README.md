@@ -86,27 +86,24 @@ Dentro do processo de entendimento de negócio, exploração dos dados e decisã
 ## 2.1  Insights e Hipóteses encontradas:
 
 #### H8. Lojas deveriam vender mais ao longo dos anos.
-
 - *FALSA** Apesar de não termos o ano de 2015 fechado, vemos uma tendência das lojas venderem menos ao longo dos anos
-![](https://github.com/GuilhermeGNO//blob/main/banner.png)
-![alt text]https://github.com/GuilhermeGNO/Projetos-Data-Science/blob/main/Projeto%20ROSSMANN%20Store%20Sales/images/h8.jpg
 <img src='images/h8.jpg' />
 
 #### H9. Lojas deveriam vender mais no segundo semestre dos anos.
-
 - *FALSA** Lojas vendem menos ao longo do segundo semestre dos anos
+<img src='images/h9.jpg' />
 
 #### H10. Lojas deveriam vender mais depois do dia 10 de cada mês.
-
 - *VERDADEIRA** Lojas vendem mais depois do dia 10 de cada mês
+<img src='images/h10.jpg' />
 
 #### H11. Lojas deveriam vender menos aos finais de semana.
-
 - *VERDADEIRA** Lojas vendem menos no finais de semana
+<img src='images/h11.jpg' />
 
 #### H12. Lojas deveriam vender menos durante os feriados escolares.
-
 - *VERDADEIRA** Lojas vendem menos durante os feriados escolares, exceto os meses de Julho e Agosto.
+<img src='images/h12.jpg' />
 
 ## 2.2  Modelos de Machine Learning Utilizados e métricas de performance:
 
