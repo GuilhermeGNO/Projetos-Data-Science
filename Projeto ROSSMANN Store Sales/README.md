@@ -126,7 +126,7 @@ Abaixo conseguimos ver o resultando em uma time line das previsões e uma compar
 <img src='images/previsao_baseline.jpg' />
 
 Também para colaborar com a análise do CFO, expomos um gráfico abaixo que demonstra se as previsões subestimaram ou superestimaram os valores preditos.
-<img src='images/analise_subestimado_superestimado.jpg' />
+<img src='images/previsao_baseline.jpg' />
 
 # 4. Conclusão e pontos de melhorias:
 
