@@ -37,57 +37,31 @@ Os dados foram extraídos do link abaixo, onde constam todas as vendas das farm�
 Abaixo uma tabela com os atributos e descrição do conjunto de dados:
 
 |***Atributo*** | ***Descrição*** |
-
 | -------- | --------- |
-
 |**store** | Identificação de cada loja |
-
 |**day_of_week** | dia da semana |
-
 |**date** | data da realização da venda |
-
 |**sales** | quantidade de vendas de uma determinada data |
-
 |**promo** | aponta se uma farmácia esta realizando promoção ou não |
-
 |**state_holiday** | Indica feriados nacionasi. Geralmente todas as lojas entram em recesso em feriados nacionais, a seguinte legenda pode ser interpretada para essa coluna de informações: a = public holiday, b = easter holiday, c = christmas e 0 = None|
-
 |**school_holiday** | indica se a loja foi afetada pelo fechamento de escolas públicas devido a algum feriado |
-
 |**store_type** | Diferencia as lojas em 4 modelos diferentes: a, b, c e d |
-
 |**assortment** | Indica o tipo de sortimentos que a loja possuí, a = basic, b = extra e c = extended |
-
 |**competition_distance** | Distância em metros, da loja concorrente mais próxima |
-
 |**competition_open_since_month** | Indica o mês que o competidor mais próximo foi aberto |
-
 |**competition_open_since_year** | Indica o ano que o competidor mais próximo foi aberto |
-
 |**promo2** | Indica se a loja efetuou em algum momento promoções consecutivas, 0 = store is no participating, 1 = store is participating  |
-
 |**promo2_since_week** | Descreve a semana que a loja aderiu a promo2 |
-
 |**promo2_since_year** | Descreve o ano que a loja aderiu a promo2 |
-
 |**is_promo** | Descreve se a loja esta ou não em promoção, 0 = não esta em promoção, 1 = esta em promoção |
-
 |**year** | Ano da venda |
-
 |**month** | Mês da venda |
-
 |**day** | Dia da venda |
-
 |**week_of_year**| Semana do ano |
-
 |**year_week**| Concatenação da semana do ano e o ano |
-
 |**competition_since**| Concatenação das colunas: competition_open_since_month e competition_since_year  |
-
 |**competition_time_month**| Quantidade de meses desde que a competição mais próxima começou |
-
 |**promo_since**| Concatenação das colunas promo2_since_year e promo2_since_week |
-
 |**promo_time_week**| Descreve a quantidade em semanas que uma promoção esta ocorrendo |
 
 ### 1.5 Premissas do negócio:
