@@ -4,9 +4,9 @@ O objetivo desse projeto é fornecer para o CFO e Gerentes das Lojas ,uma previs
 
 Para alcance dessa proposta será utilizada técnicas de exploração de dados, focando nas vendas das lojas contidas em uma base de dados fornecida pela Rossmann.
 
-**## 1. Drogarias ROSSMANN**
+**### 1. Drogarias ROSSMANN**
 
-### 1.1 Contexto do negócio:
+## 1.1 Contexto do negócio:
 
 A Rossmann é uma cadeia de formácias fundada em 1972 por Dirk Rossmann. É considerada uma das maiores redes de farmácias na Europa com cerca de 56.200 colaboradores e mais de 4000 lojas. Em 2019 Rossmann faturou mais de 10 bilhões, considerando países como: Alemanha, Polonia, Hungria, Republica Tcheca, Turkia, Albania, Kosovo e Espanha. Fonte: [Wikipedia](https://en.wikipedia.org/wiki/Rossmann_(company)
 
@@ -14,7 +14,7 @@ O objetivo do case é fornecer os valores de vendas das farmácias para que assi
 
 A principal estratégia para resolução da solicitação do CFO, será utilizadas técnicas de análises exploratórias com base em um arquivo disponibilizado pelo CFO das vendas das lojas dos anos de 2013, 2014 e 2015.
 
-### 1.2 Questão do negócio:
+## 1.2 Questão do negócio:
 
 Considerações:
 
@@ -28,7 +28,7 @@ Em resumo, o projeto visa responder às seguintes perguntas de negócio:
 
 - Com base no projeto, qual é o melhor e pior cenário de vendas em valores ?
 
-### 1.3 Sobre os dados:
+## 1.3 Sobre os dados:
 
 Os dados foram extraídos do link abaixo, onde constam todas as vendas das farmácias do período de 2013 a 2015.
 
@@ -64,14 +64,14 @@ Abaixo uma tabela com os atributos e descrição do conjunto de dados:
 |**promo_since**| Concatenação das colunas promo2_since_year e promo2_since_week |
 |**promo_time_week**| Descreve a quantidade em semanas que uma promoção esta ocorrendo |
 
-### 1.5 Premissas do negócio:
+## 1.4 Premissas do negócio:
 
 Dentro do processo de entendimento de negócio, exploração dos dados e decisão para fornecer os insights finais, foram adotadas as seguintes premissas:
 
 - Os dados disponíveis são do período de 01/01/2013 a 31/07/2015;
 - Lojas sem informação de distância do competidor mais próximo, foram consideradas com distância de 200.000 metros;
 
-**## 2. Planejamento para solução do problema:**
+**### 2. Planejamento para solução do problema:**
 
 1. Limpeza de dados
 2. Feature Engineering
@@ -83,7 +83,7 @@ Dentro do processo de entendimento de negócio, exploração dos dados e decisã
 8. Fine-Tuning Hyperparameter
 9. Avaliação dos algoritmos
 
-### 2.1  Insights e Hipóteses encontradas:
+## 2.1  Insights e Hipóteses encontradas:
 
 #### H8. Lojas deveriam vender mais ao longo dos anos.
 
@@ -105,7 +105,7 @@ Dentro do processo de entendimento de negócio, exploração dos dados e decisã
 
 - *VERDADEIRA** Lojas vendem menos durante os feriados escolares, exceto os meses de Julho e Agosto.
 
-### 2.2  Modelos de Machine Learning Utilizados e métricas de performance:
+## 2.2  Modelos de Machine Learning Utilizados e métricas de performance:
 
 Para esse projeto foram utilizados os seguintes algoritmos de Machine Learning:
 
@@ -126,7 +126,7 @@ Abaixo conseguimos ver o resultando em uma time line das previsões e uma compar
 
 Também para colaborar com a análise do CFO, expomos um gráfico abaixo que demonstra se as previsões subestimaram ou superestimaram os valores preditos.
 
-## 4. Conclusão e pontos de melhorias:
+### 4. Conclusão e pontos de melhorias:
 
 O projeto tem como princípio a geração de insights para o negócio, assim como responder algumas perguntas feitas pela empresa. O objetivo foi concluído, e foi possível extrair informações relevantes e com potencial forma de gerar direcionamento para as próximas operações da House Rocket.
 
