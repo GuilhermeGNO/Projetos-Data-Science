@@ -4,9 +4,9 @@ O objetivo desse projeto é fornecer para o CFO e Gerentes das Lojas ,uma previs
 
 Para alcance dessa proposta será utilizada técnicas de exploração de dados, focando nas vendas das lojas contidas em uma base de dados fornecida pela Rossmann.
 
-**### 1. Drogarias ROSSMANN**
+**## 1. Drogarias ROSSMANN**
 
-## 1.1 Contexto do negócio:
+### 1.1 Contexto do negócio:
 
 A Rossmann é uma cadeia de formácias fundada em 1972 por Dirk Rossmann. É considerada uma das maiores redes de farmácias na Europa com cerca de 56.200 colaboradores e mais de 4000 lojas. Em 2019 Rossmann faturou mais de 10 bilhões, considerando países como: Alemanha, Polonia, Hungria, Republica Tcheca, Turkia, Albania, Kosovo e Espanha. Fonte: [Wikipedia](https://en.wikipedia.org/wiki/Rossmann_(company)
 
