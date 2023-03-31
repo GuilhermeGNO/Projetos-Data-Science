@@ -89,7 +89,7 @@ Dentro do processo de entendimento de negócio, exploração dos dados e decisã
 
 - *FALSA** Apesar de não termos o ano de 2015 fechado, vemos uma tendência das lojas venderem menos ao longo dos anos
 ![](https://github.com/GuilhermeGNO//blob/main/banner.png)
-![]https://github.com/GuilhermeGNO/Projetos-Data-Science/blob/main/Projeto%20ROSSMANN%20Store%20Sales/images/h8.jpg
+![alt text]https://github.com/GuilhermeGNO/Projetos-Data-Science/blob/main/Projeto%20ROSSMANN%20Store%20Sales/images/h8.jpg
 
 #### H9. Lojas deveriam vender mais no segundo semestre dos anos.
 
