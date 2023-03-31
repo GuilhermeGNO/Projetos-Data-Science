@@ -122,8 +122,9 @@ Apos todo o processo descrito no notebook, para preparação e treinamento do mo
 
 Apesar de chegarmos aos valores brutos, entendemos que uma consulta por loja seria mais interessente para detalhamento das receitas. Utilizando dessa premissa, deixamos também como parte do projeto a opção do CFO analisar a previsão de cada loja separadamente, além de disponibilizar um acesso a um bot do telegram, a qual o mesmo, ou qualquer pessoa interessada, bastará possuir o app Telegram em seu telefone, o endereço do bot do Telegram e um acesso a internet. Uma imagem da previsão de cada loja, e o link do bot telefram encontram-se abaixo:
 
-Abaixo conseguimos ver o resultando em uma time-line das previsões.
-<img src='images/previsao_baseline.jpg' />
+Abaixo conseguimos ver o resultando em uma time-line das previsões
+![Alt](images/previsao_baseline.jpg')
+
 
 # 4. Conclusão e pontos de melhorias:
 
