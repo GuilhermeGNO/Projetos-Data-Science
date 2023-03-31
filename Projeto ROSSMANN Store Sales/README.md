@@ -139,6 +139,6 @@ As visualizações fornecidas irão permitir com que a empresa possa avaliar as 
 
 Pontos de Melhorias:
 
-Melhor a técnica de preenchimento de *Missing Values*: por exemplo, competition_distance, poderá ser utilizado métodos como preenchimento considerando a média da distância das lojas perto dessa loja da Rossmann, assim mediana ou moda caso faça sentido.
+Melhor a técnica de preenchimento de *Missing Values*: competition_distance, poderá ser utilizado métodos como preenchimento considerando a média da distância das lojas perto dessa loja da Rossmann, assim mediana ou moda caso faça sentido.
 
-Coletar mais dados: por exemplo o ano de 2015 não esta completo como informado no tópico que trata das premissas do negócio.
+Coletar mais dados: o ano de 2015 não esta completo como informado no tópico que trata das premissas do negócio.
