@@ -71,7 +71,7 @@ Dentro do processo de entendimento de negócio, exploração dos dados e decisã
 - Os dados disponíveis são do período de 01/01/2013 a 31/07/2015;
 - Lojas sem informação de distância do competidor mais próximo, foram consideradas com distância de 200.000 metros;
 
-**### 2. Planejamento para solução do problema:**
+# 2. Planejamento para solução do problema:
 
 1. Limpeza de dados
 2. Feature Engineering
@@ -116,7 +116,7 @@ Para esse projeto foram utilizados os seguintes algoritmos de Machine Learning:
 
 Na avaliação de performance, o XGBoost não desempenhou a melhor performance de todas, porém devido a questão de aprendizado, seguimos com ele, pois no entendimento para esse projeto tentei uma abordagem diferente, já que a utilização dos outros algoritmos possuí vasta aplicação e possuí amplo material de consulta, diferente do XGBoost.
 
-**### 3. Resultado da análise para o Negócio:**
+# 3. Resultado da análise para o Negócio:
 
 Apos todo o processo descrito no notebook, para preparação e treinamento do modelo desenvolvido, chegamos em uma predição de receita bruta no final de 6 semanas de $ 286.45 Milhões de dólares, também consideramos o pior e melhor cenários, ao qual utilizamos para o calculo o Mean Absolute Error (MAE), o melhor e pior cenários são $ 287.29 Milhões e $ 285.57 Milhões, respectivamente.
 
@@ -126,7 +126,7 @@ Abaixo conseguimos ver o resultando em uma time line das previsões e uma compar
 
 Também para colaborar com a análise do CFO, expomos um gráfico abaixo que demonstra se as previsões subestimaram ou superestimaram os valores preditos.
 
-### 4. Conclusão e pontos de melhorias:
+# 4. Conclusão e pontos de melhorias:
 
 O projeto tem como princípio a geração de insights para o negócio, assim como responder algumas perguntas feitas pela empresa. O objetivo foi concluído, e foi possível extrair informações relevantes e com potencial forma de gerar direcionamento para as próximas operações da House Rocket.
 
