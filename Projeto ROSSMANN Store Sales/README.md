@@ -125,6 +125,7 @@ Apesar de chegarmos aos valores brutos, entendemos que uma consulta por loja ser
 
 Abaixo conseguimos ver o resultando em uma time-line das previsões.
 ![previsao_baseline](https://user-images.githubusercontent.com/60413561/229091566-1e5bac27-1aff-4c47-aa99-980590445e48.jpg)
+![analise_subestimado_superestimado](https://user-images.githubusercontent.com/60413561/229092100-a69f0d63-a27b-46c2-bfe1-bdb1e55926fd.jpg)
 
 Análise subestimada e superestimada
 ![analise_subestimado_superestimado](https://user-images.githubusercontent.com/60413561/229092100-a69f0d63-a27b-46c2-bfe1-bdb1e55926fd.jpg)
