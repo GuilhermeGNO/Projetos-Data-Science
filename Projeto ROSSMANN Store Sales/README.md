@@ -121,8 +121,7 @@ Na avaliação de performance, o XGBoost não desempenhou a melhor performance d
 
 Apos todo o processo descrito no notebook, para preparação e treinamento do modelo desenvolvido, chegamos em uma predição de receita bruta no final de 6 semanas de $ 286.45 Milhões de dólares, também consideramos o pior e melhor cenários, ao qual utilizamos para o calculo o Mean Absolute Error (MAE), o melhor e pior cenários são $ 287.29 Milhões e $ 285.57 Milhões, respectivamente.
 
-Apesar de chegarmos aos valores brutos, entendemos que uma consulta por loja seria mais interessenta para detalhamento das receitas. Utilizando dessa premissa, deixamos também como parte do projeto a opção do CFO analisar a previsão de cada loja serapardamente além de disponibilizar um acesso a um bot do telegram, a qual o mesmo, ou qualquer pessoa interessada, bastará possuir o app Telegram em seu telefone, o endereço do bot do Telegram e um acesso a internet. Uma imagem da previsão de cada loja, e o link do bot telefram encontram-se abaixo:
-Bot Telegram: https://web.telegram.org/z/#5944327385<br>
+Apesar de chegarmos aos valores brutos, entendemos que uma consulta por loja seria mais interessenta para detalhamento das receitas. Utilizando dessa premissa, deixamos também como parte do projeto a opção do CFO analisar a previsão de cada loja serapardamente além de disponibilizar um acesso a um bot do telegram, a qual o mesmo, ou qualquer pessoa interessada, bastará possuir o app Telegram em seu telefone, o endereço do bot do Telegram e um acesso a internet.
 
 Abaixo conseguimos ver o resultando em uma time line das previsões e uma comparação quanto ao baseline e um gráfico que exibe quanto o modelo esta super e subestimando as previsões:<br>
 ![previsao_baseline](https://user-images.githubusercontent.com/60413561/229093343-182e32a3-237e-4273-8512-ce4694ffedb6.jpg)<br>
