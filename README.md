@@ -30,7 +30,10 @@ No momento, estou buscando uma oportunidade de trabalhar profissionalmente como 
 * SQL
 
 **Estatística e Machine Learning:** 
-* Em progresso 
+* Linear Regression
+* Linear Regression Regularized
+* Random Forest Regressor
+* XGboost Regressor
 
 **Visualização de Dados:**
 * Seaborn
@@ -43,6 +46,7 @@ No momento, estou buscando uma oportunidade de trabalhar profissionalmente como 
 Abaixo listo projetos realizados e que estão contidos nesse repositório:
 
 * **Projeto de Insights para recomendação de compra/venda de imóveis:** https://bityli.com/GkPtYa
+* **Proejto de Previsão de vendas para uma cadeia de Farmácias:** https://bit.ly/3zqXdHh
 
 **Links para contato:**
 * [LinkedIn](https://www.linkedin.com/in/guilherme-novais-84b161163/)
